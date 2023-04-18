@@ -1,0 +1,29 @@
+---
+layout: default
+title: ""
+---
+
+    <div id="portrait">
+            <img src="{{ site.domain}}/assets/images/portrait_front.jpg"/>
+            <span>Taken on <a href="https://www.alltrails.com/trail/us/vermont/gile-mountain-trail">Gile Mountain</a></span>
+    </div>
+    <div id="content">
+        <h2>About Me</h2>
+        I am a 5th year graduate student at Dartmouth College advised by <a href="https://math.dartmouth.edu/~orellana/">Rosa Orellana</a>. My research is in combinatorial representation theory.
+
+        <h2>Contact</h2>
+        <h3>E-Mail</h3>
+        <a href="mailto:awilson@math.dartmouth.edu">awilson@math.dartmouth.edu</a>        
+
+        <br />
+        <br />
+
+        <h2>Gallery</h2>
+        {% for post in site.gallery %}
+	    	<div class="mini gallery">
+			  <a href="{%if post.external != nil %} {{ post.external }} {%else%} {{ post.url }} {%endif%}" class="image">
+			    <img src="{{ site.domain }}/assets/images/thumbnails/{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}" width="600" height="400">
+			  </a>
+			  <div class="desc">{{ post.blurb }}</div>
+			</div>
+	  	{% endfor %}

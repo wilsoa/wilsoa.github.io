@@ -1,0 +1,36 @@
+---
+layout: default
+title:  "Littlewood Richardson"
+categories: gallery
+blurb: An interactive example of Remmel and Whitney's combinatorial rule for expanding the product of Schur functions
+thumbnail: lr_screenshot.png
+thumbnail_alt: 
+---
+        <script src="{{site.url}}/assets/scripts/p5.min.js"></script>
+        <script src="{{site.url}}/assets/scripts/LRCoeff.js"></script>
+        The Littlewood-Richardson coefficients $c^\nu_{\lambda,\nu}$ describe the product of 
+        Schur functions.
+
+        The following is an example of computing $c^\nu_{\lambda,\mu}$ using the rule described in <a href="https://sites.math.washington.edu/~billey/colombia/references/remmel.whitney.1984.pdf">this paper</a> by J. B. Remmel and R. Whitney. The coefficient is equal to the number of tableaux of shape $\nu$ which can be created by adding boxes in the blue-shaded positions subject to the following rules:
+        <ol>
+            <li>If $x$ and $x+1$ occur in the same row of the skew tableau on the left, then $x+1$ must occur in a cell weakly above and strictly to the right of the cell in which $x$ occurs in the tableau being created</li>
+            <li>If $y$ occurs in the same column and in a row immediately below where $x$ occurs in the tableau on the left, then $y$ must occur in a cell which is strictly below and weakly to the left of $x$</li>
+        </ol>
+            <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+Try different shapes for $\lambda$ and $\mu$:
+            <ul>
+                <li><a href="https://math.dartmouth.edu/~awilson/sketches/LRCoeff.php?[4,3,2,1]/[2,2]">(2,1)&times;(2,1)</a></li>
+                <li><a href="https://math.dartmouth.edu/~awilson/sketches/LRCoeff.php?[4,3,2]/[2,2]">(2,1)&times;(2)</a></li>
+            </ul>

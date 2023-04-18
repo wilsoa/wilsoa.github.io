@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <title> Littlewood Richardson &mdash; Alexander Wilson</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+    <header>       
+        <div id="navigation">
+    <a href="http://localhost:4000">Home</a>
+    <a href="http://localhost:4000/research.html">Research</a>
+    <a href="http://localhost:4000/teaching.html">Teaching/Mentoring</a>
+    <a href="http://localhost:4000/outreach.html">Outreach/Service</a>
+    <a href="http://localhost:4000/assets/documents/Curriculum_Vitae.pdf">CV</a>
+    <a href="http://localhost:4000/gallery.html">Gallery</a>
+</div>
+        <h1>Alexander Wilson</h1>
+    </header>
+    <h2>Littlewood Richardson</h2>
+            <script src="http://localhost:4000/assets/scripts/p5.min.js"></script>
+        <script src="http://localhost:4000/assets/scripts/LRCoeff.js"></script>
+        The Littlewood-Richardson coefficients $c^\nu_{\lambda,\nu}$ describe the product of 
+        Schur functions.
+
+        The following is an example of computing $c^\nu_{\lambda,\mu}$ using the rule described in <a href="https://sites.math.washington.edu/~billey/colombia/references/remmel.whitney.1984.pdf">this paper</a> by J. B. Remmel and R. Whitney. The coefficient is equal to the number of tableaux of shape $\nu$ which can be created by adding boxes in the blue-shaded positions subject to the following rules:
+        <ol>
+            <li>If $x$ and $x+1$ occur in the same row of the skew tableau on the left, then $x+1$ must occur in a cell weakly above and strictly to the right of the cell in which $x$ occurs in the tableau being created</li>
+            <li>If $y$ occurs in the same column and in a row immediately below where $x$ occurs in the tableau on the left, then $y$ must occur in a cell which is strictly below and weakly to the left of $x$</li>
+        </ol>
+            <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+Try different shapes for $\lambda$ and $\mu$:
+            <ul>
+                <li><a href="https://math.dartmouth.edu/~awilson/sketches/LRCoeff.php?[4,3,2,1]/[2,2]">(2,1)&times;(2,1)</a></li>
+                <li><a href="https://math.dartmouth.edu/~awilson/sketches/LRCoeff.php?[4,3,2]/[2,2]">(2,1)&times;(2)</a></li>
+            </ul>
+</body>
+</html>
+
+
