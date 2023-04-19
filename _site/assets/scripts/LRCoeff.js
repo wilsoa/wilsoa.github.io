@@ -14,7 +14,7 @@ var finalAdd = reverseLexTableau[reverseLexTableau.length - 1][0];
 var constructedX = 4 + reverseLexTableau[0].length * bigBoxDim + 1.5 * bigBoxDim;
 
 function setup() {
-  createCanvas(17 * bigBoxDim + 8, 8 * bigBoxDim + 8);
+  createCanvas(20 * bigBoxDim + 8, 14 * bigBoxDim + 8);
 }
 
 function drawNumbers (xPos, yPos, boxDimension, tableau, colors) {
@@ -204,9 +204,14 @@ function draw() {
 var foundTableaux = [];
 
 function drawFoundTableaux () {
+	rowLength = Math.floor((20 * bigBoxDim + 8) / (smallBoxDim * 6));
+
 	for (var i = 0; i < foundTableaux.length; i++) {
-		drawDiagram(4 + i * smallBoxDim * 6, 6*bigBoxDim + 8, smallBoxDim, foundTableaux[i]);
-	  	drawNumbers(4 + i * smallBoxDim * 6, 6*bigBoxDim + 8, smallBoxDim, foundTableaux[i]);
+		xCoord = 4 + (i % rowLength) * smallBoxDim * 6;
+		yCoord = 6*bigBoxDim + 8 + Math.floor(i / rowLength) * smallBoxDim * 6;
+
+		drawDiagram(xCoord, yCoord, smallBoxDim, foundTableaux[i]);
+	  	drawNumbers(xCoord, yCoord, smallBoxDim, foundTableaux[i]);
 	}
 }
 
