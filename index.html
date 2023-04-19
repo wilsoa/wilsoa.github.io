@@ -18,12 +18,4 @@ title: ""
         <br />
         <br />
 
-        <h2>Gallery</h2>
-        {% for post in site.gallery %}
-	    	<div class="mini gallery">
-			  <a href="{%if post.external != nil %} {{ post.external }} {%else%} {{ post.url }} {%endif%}" class="image">
-			    <img src="{{ site.domain }}/assets/images/thumbnails/{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}" width="600" height="400">
-			  </a>
-			  <div class="desc">{{ post.blurb }}</div>
-			</div>
-	  	{% endfor %}
+        {% include gallery.html %}
