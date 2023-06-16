@@ -13,7 +13,7 @@
         {% include navigation.html %}
         <h1><a href="{{site.url}}/">{{site.title}}</a></h1>
     </header>
-    <h2>{{ page.title }}</h2>
+    {%if page.title != ""%}<h2>{{ page.title }}</h2>{%endif%}
     {{content}}
 </body>
 </html>

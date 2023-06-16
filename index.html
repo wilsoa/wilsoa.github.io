@@ -4,8 +4,11 @@ title: ""
 ---
 
 <div id="portrait">
-        <img src="{{ site.domain}}/assets/images/portrait_oberlin_college.jpg" class="desktop"/>
-        <img src="{{ site.domain}}/assets/images/portrait_oberlin_college_thin.jpg" class="mobile"/>
+        <picture>
+          <source media="(min-width: 768px)" srcset="{{ site.domain}}/assets/images/portrait_oberlin_college.jpg" />
+          <img src="{{ site.domain}}/assets/images/portrait_oberlin_college_thin.jpg" alt="A mathematician standing at the intersection of streets named 'Oberlin' and 'College'" />
+        </picture>
+
         Photo taken by <a href="{{ site.data.people.sammy.url }}">Sammy Luo</a> in Stanford, CA.</span>
 </div>
 <div id="content">
