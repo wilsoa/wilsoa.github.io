@@ -11,44 +11,53 @@
 <body>
     <header>       
         <div id="navigation">
-    <a href="http://localhost:4000/index.html">Home</a>
     <a href="http://localhost:4000/research.html">Research</a>
     <a href="http://localhost:4000/teaching.html">Teaching/Mentoring</a>
     <a href="http://localhost:4000/outreach.html">Outreach/Service</a>
     <a href="http://localhost:4000/assets/documents/Curriculum_Vitae.pdf">CV</a>
     <a href="http://localhost:4000/gallery.html">Gallery</a>
 </div>
-        <h1>Alexander Wilson</h1>
+        <h1><a href="http://localhost:4000/">Alexander Wilson</a></h1>
     </header>
     <h2>Littlewood Richardson Rule</h2>
             <script src="http://localhost:4000/assets/scripts/p5.min.js"></script>
         <script src="http://localhost:4000/assets/scripts/LRCoeff.js"></script>
-        The Littlewood-Richardson coefficients $c^\nu_{\lambda,\nu}$ describe the product of 
-        Schur functions.
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+<style>
+    canvas {display:block;margin:auto}
+</style>
 
-        The following is an example of computing $c^\nu_{\lambda,\mu}$ using the rule described in <a href="https://sites.math.washington.edu/~billey/colombia/references/remmel.whitney.1984.pdf">this paper</a> by J. B. Remmel and R. Whitney. The coefficient is equal to the number of tableaux of shape $\nu$ which can be created by adding boxes in the blue-shaded positions subject to the following rules:
+        The Littlewood-Richardson coefficients $c^\nu_{\lambda,\mu}$ describe the product of 
+        Schur functions. The following is an example of computing $c^\nu_{\lambda,\mu}$ using the rule described in <a href="https://sites.math.washington.edu/~billey/colombia/references/remmel.whitney.1984.pdf">this paper</a> by J. B. Remmel and R. Whitney. The coefficient is equal to the number of tableaux of shape $\nu$ which can be created by adding boxes in the blue-shaded positions subject to the following rules:
         <ol>
             <li>If $x$ and $x+1$ occur in the same row of the skew tableau on the left, then $x+1$ must occur in a cell weakly above and strictly to the right of the cell in which $x$ occurs in the tableau being created</li>
             <li>If $y$ occurs in the same column and in a row immediately below where $x$ occurs in the tableau on the left, then $y$ must occur in a cell which is strictly below and weakly to the left of $x$</li>
         </ol>
-            <script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-</script>
-            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 Try different shapes for $\lambda$ and $\mu$:
             <ul>
-                <li><a href="http://localhost:4000/gallery/littlewood_richardson.html?[4,3,2,1]/[2,2]">(2,1)&times;(2,1)</a></li>
-                <li><a href="http://localhost:4000/gallery/littlewood_richardson.html?[4,3,2]/[2,2]">(2,1)&times;(2)</a></li>
-                <li><a href="http://localhost:4000/gallery/littlewood_richardson.html?[4,4,2,2]/[2,2]">(2,2)&times;(2,2)</a></li>
+                <li><a href="http://localhost:4000/gallery/littlewood_richardson.html?[4,3,2,1]/[2,2]">$(2,1)\times(2,1)$</a></li>
+                <li><a href="http://localhost:4000/gallery/littlewood_richardson.html?[4,3,2]/[2,2]">$(2,1)\times(2)$</a></li>
+                <li><a href="http://localhost:4000/gallery/littlewood_richardson.html?[4,4,2,2]/[2,2]">$(2,2)\times(2,2)$</a></li>
             </ul>
 </body>
 </html>
