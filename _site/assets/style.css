@@ -16,7 +16,7 @@ div.gallery .header {width: 100%, height:100%;}
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-            #content {max-width: 80%;}
+            #content {max-width: 75%;}
             #portrait {float: right; max-width:20%;}
             #portrait img {width: 100%; margin-bottom:5px;}
             #navigation {float:right; margin-top:10px}
