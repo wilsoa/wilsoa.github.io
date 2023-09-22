@@ -30,7 +30,8 @@ set_A.onkeypress = capture_event;
 set_B.onkeypress = capture_event;
 
 function sanitize (part) {
-	part = part.replace(/[{}]/, "")
+	part = part.replace(/{/, "")
+	part = part.replace(/}/, "")
 	return +part;
 }
 
