@@ -59,12 +59,18 @@ div.header {
   color:white;
   text-weight:bold;
   font-size:30px;
-  text-align: center;
-  vertical-align: center;
+  display: flex;
+  text-align:center;
+   justify-content: center;
+   align-items: center;
 }
 
-div.Interactive p {background-color:#0085FF}
-div.Other p {background-color:#FF9000}
+
+div.Tools, div.header.Tools:hover {border:2px solid #0085FF60}
+div.Miscellany, div.header.Miscellany:hover {border:2px solid #FF900060}
+div.header.Tools {background-color:#0085FFAA}
+div.header.Miscellany {background-color:#FF9000AA}
+
 
 h2, h3 {display:block;margin-bottom:.1in;}
 
