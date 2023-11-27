@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <title> LC Random Battle Team &mdash; Alexander Wilson</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+    <header>
+        <h1>LC Random Battle Team</h1>
+    </header>
+    <textarea id="output" style="width:100%;height:1000px;"></textarea>
+
+<script src="sets.js"></script>
+<script>
+
+	ev_names = {hp: "HP", atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe"}
+
+	function format_EVs (evs) {
+		out = [];
+
+		for (ev in evs) {
+			out.push(evs[ev] + " " + ev_names[ev]);
+		}
+
+		return out.join(" / ")
+	}
+
+	function choose_random (array, disallowed) {
+		if (typeof(array) == "string") {
+			return array;
+		}
+
+		items = [];
+
+		for (i in array) {
+			if (!disallowed.includes(array[i])) {
+				items.push(array[i]);
+			}
+		}
+
+		return items[Math.floor(Math.random()*items.length)]
+	}
+
+	function parseable_set (poke, set) {
+		out = poke + " @ " + set.item + "\n";
+		out += "Level: 5\n";
+		out += "Ability: " + set.ability + "\n";
+		out += "EVs: " + format_EVs(set.evs) + "\n";
+		out += "Tera Type: " + choose_random(set.teratypes,[]) + "\n";
+		out += set.nature + "Nature\n";
+
+		chosen_moves = [];
+
+		for (i in set.moves) {
+			chosen_moves.push(choose_random(set.moves[i], chosen_moves));
+		}
+
+		for (i in chosen_moves) {
+			out += " - " + chosen_moves[i] + "\n";
+		}
+
+		return out;
+	}
+
+	// Get a sample of six pokemon
+	pokes = [];
+
+	for (poke in sets) {
+		pokes.push(poke);
+	}
+
+	sample = [];
+
+	for (let i = 0; i < 6; i++) {
+		poke = choose_random(pokes, sample);
+		possible_sets = [];
+
+		for (set in sets[poke]) {
+			possible_sets.push(set);
+		}
+
+		sample.push([poke, sets[poke][choose_random(possible_sets, [])]]);
+	}
+
+	console.log(sample)
+
+	output = document.getElementById("output")
+
+	output.value = "";
+
+	for (j in sample) {
+		output.value += parseable_set(sample[j][0], sample[j][1]) + "\n";
+	}
+
+	
+
+</script>
+</body>
+</html>
