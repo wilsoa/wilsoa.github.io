@@ -1,8 +1,20 @@
 ---
 layout: bare
-title:  "LC Random Battle Team"
 ---
+<div id="team_highlight"></div>
+<h2>LC Random Battle Team</h2>
 <textarea id="output" style="width:100%;height:1000px;"></textarea>
+
+<style>
+	#team_highlight {
+		float:right;
+		align-content: center;
+	}
+
+	#team_highlight img{
+		margin-left:20px;
+	}
+</style>
 
 <script src="sets.js"></script>
 <script>
@@ -36,7 +48,13 @@ title:  "LC Random Battle Team"
 	}
 
 	function parseable_set (poke, set) {
-		out = poke + " @ " + set.item + "\n";
+		if (set.nickname != undefined) {
+			out = set.nickname + " (" + poke + ") @ " + set.item + "\n";
+		}
+		else {
+			out = poke + " @ " + set.item + "\n";
+		}
+		
 		out += "Level: 5\n";
 		out += "Ability: " + set.ability + "\n";
 		out += "EVs: " + format_EVs(set.evs) + "\n";
@@ -63,10 +81,12 @@ title:  "LC Random Battle Team"
 		pokes.push(poke);
 	}
 
+	sampled_pokes = [];
 	sample = [];
 
 	for (let i = 0; i < 6; i++) {
-		poke = choose_random(pokes, sample);
+		poke = choose_random(pokes, sampled_pokes);
+		sampled_pokes.push(poke);
 		possible_sets = [];
 
 		for (set in sets[poke]) {
@@ -85,6 +105,15 @@ title:  "LC Random Battle Team"
 	for (j in sample) {
 		output.value += parseable_set(sample[j][0], sample[j][1]) + "\n";
 	}
+
+	highlight = ""
+
+	for (i in sample) {
+		poke = sample[i][0].toLowerCase();
+		highlight += "<img src='https://www.smogon.com/dex/media/sprites/xy/" + poke + ".gif' />"
+	}
+
+	document.getElementById("team_highlight").innerHTML = highlight;
 
 	
 

@@ -5,14 +5,27 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0">
     <meta http-equiv="Content-Style-Type" content="text/css"/>
-    <title> LC Random Battle Team &mdash; Alexander Wilson</title>
+    <title>  &mdash; Alexander Wilson</title>
     <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
     <header>
-        <h1>LC Random Battle Team</h1>
+        <h1></h1>
     </header>
-    <textarea id="output" style="width:100%;height:1000px;"></textarea>
+    <div id="team_highlight"></div>
+<h2>LC Random Battle Team</h2>
+<textarea id="output" style="width:100%;height:1000px;"></textarea>
+
+<style>
+	#team_highlight {
+		float:right;
+		align-content: center;
+	}
+
+	#team_highlight img{
+		margin-left:20px;
+	}
+</style>
 
 <script src="sets.js"></script>
 <script>
@@ -46,12 +59,18 @@
 	}
 
 	function parseable_set (poke, set) {
-		out = poke + " @ " + set.item + "\n";
+		if (set.nickname != undefined) {
+			out = set.nickname + " (" + poke + ") @ " + set.item + "\n";
+		}
+		else {
+			out = poke + " @ " + set.item + "\n";
+		}
+		
 		out += "Level: 5\n";
 		out += "Ability: " + set.ability + "\n";
 		out += "EVs: " + format_EVs(set.evs) + "\n";
 		out += "Tera Type: " + choose_random(set.teratypes,[]) + "\n";
-		out += set.nature + "Nature\n";
+		out += set.nature + " Nature\n";
 
 		chosen_moves = [];
 
@@ -73,10 +92,12 @@
 		pokes.push(poke);
 	}
 
+	sampled_pokes = [];
 	sample = [];
 
 	for (let i = 0; i < 6; i++) {
-		poke = choose_random(pokes, sample);
+		poke = choose_random(pokes, sampled_pokes);
+		sampled_pokes.push(poke);
 		possible_sets = [];
 
 		for (set in sets[poke]) {
@@ -95,6 +116,15 @@
 	for (j in sample) {
 		output.value += parseable_set(sample[j][0], sample[j][1]) + "\n";
 	}
+
+	highlight = ""
+
+	for (i in sample) {
+		poke = sample[i][0].toLowerCase();
+		highlight += "<img src='https://www.smogon.com/dex/media/sprites/xy/" + poke + ".gif' />"
+	}
+
+	document.getElementById("team_highlight").innerHTML = highlight;
 
 	
 
