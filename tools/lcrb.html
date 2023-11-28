@@ -3,6 +3,7 @@ layout: bare
 ---
 <div id="team_highlight"></div>
 <h2>LC Random Battle Team</h2>
+<button id="copy">Copy Sets</button>
 <textarea id="output" style="width:100%;height:1000px;"></textarea>
 
 <style>
@@ -13,6 +14,10 @@ layout: bare
 
 	#team_highlight img{
 		margin-left:20px;
+	}
+
+	#copy {
+		float: left;
 	}
 </style>
 
@@ -115,6 +120,16 @@ layout: bare
 
 	document.getElementById("team_highlight").innerHTML = highlight;
 
-	
+	document.getElementById("copy").onclick = copy_sets;
+
+	function copy_sets () {
+
+	  // Select the text field
+	  output.select();
+	  output.setSelectionRange(0, 99999); // For mobile devices
+
+	   // Copy the text inside the text field
+	  navigator.clipboard.writeText(output.value);
+	}
 
 </script>
