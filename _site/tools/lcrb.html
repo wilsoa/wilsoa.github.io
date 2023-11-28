@@ -67,7 +67,7 @@
 		}
 		
 		out += "Level: 5\n";
-		out += "Ability: " + set.ability + "\n";
+		out += "Ability: " + choose_random(set.ability, []) + "\n";
 		out += "EVs: " + format_EVs(set.evs) + "\n";
 		out += "Tera Type: " + choose_random(set.teratypes,[]) + "\n";
 		out += set.nature + " Nature\n";
