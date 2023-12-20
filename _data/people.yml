@@ -1,4 +1,4 @@
-names: "lizzie,brian,sammy,bethanne,roby"
+names: "lizzie,brian,sammy,bethanne,roby,ben"
 lizzie:
   url: https://math.dartmouth.edu/~ebuchanan/
 brian:
@@ -9,3 +9,5 @@ bethanne:
   url: https://sites.google.com/view/bethannecastellano/home
 roby:
   url: https://www2.math.uconn.edu/~troby/
+ben:
+  url: https://math.dartmouth.edu/~badenbaum/
