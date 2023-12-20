@@ -11,17 +11,13 @@ portrait_caption: Photo taken by <a href="[sammy]">Sammy Luo</a> in Stanford, CA
 I am a visiting assistant professor at Oberlin College. I received my PhD from Dartmouth College advised by <a href="https://math.dartmouth.edu/~orellana/">Rosa Orellana</a>. My research is in combinatorial representation theory.
 
 
-<br />
-<h3 class="inline">E-Mail</h3> <span class="email" data-localpart="awilson6" data-domain="oberlin.edu"></span>
-<br />
-<h3 class="inline">Office</h3> King 204
+<table id="contact_info">
+	<tr><td><h3 class="inline">E-Mail</h3> <span class="email" data-localpart="awilson6" data-domain="oberlin.edu"></span></td><td><h3 class="inline">Office</h3> King 204</td></tr>
+</table>
 
-<br />
+
 <h2>Courses</h2>
 {% include current_courses.html %}
 
 <h2>Gallery</h2>
-{% include gallery.html %}
-
-<h2>About this site</h2>
-This site was last updated on {{ site.time | date: '%B %e, %Y' }}. It was created using <a href="https://jekyllrb.com/">Jekyll</a> with interactive components running on <a href="https://p5js.org/">p5.js</a>.
+<div>{% include gallery.html %}</div>

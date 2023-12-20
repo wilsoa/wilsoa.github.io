@@ -81,3 +81,17 @@ ul {margin:0px}
 .email:after { content: attr(data-domain); }
 
 .email:before { content: attr(data-localpart) "@"; }
+
+#contact_info td{
+  width:40%;
+  margin-left: 10%;
+}
+
+#contact_info {
+  margin:0;
+}
+
+#info {
+  margin-top:50px;
+  font-style: italic;
+}
