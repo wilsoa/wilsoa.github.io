@@ -9,6 +9,7 @@
 		<div class="{%if page.title == ""%}mini{%endif%} gallery {{tag}}">
 		  <a href="{%if post.external != nil %} {{ post.external }} {%else%} {{ post.url }} {%endif%}" class="image">
 		    <img src="{{ site.domain }}/assets/images/thumbnails/{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}" width="600" height="400">
+		    <div class="title">{{ post.title }}</div>
 		  </a>
 		  <div class="desc">{{ post.blurb }}</div>
 		</div>
