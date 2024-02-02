@@ -1,0 +1,66 @@
+---
+title: Homework Check
+layout: bare
+---
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+<style>
+	.answer {
+		display: none;
+	}
+
+	.answer.shown {
+		display: inline;
+	}
+
+	button.hidden {
+		display: none;
+	}
+
+
+	li {
+		margin-bottom: 5px;
+	}
+
+	button:hover {
+		cursor: pointer;
+	}
+</style>
+
+Below, you can check your homework answers <b>after you have attempted to the problem yourself</b>. Of course, your submission should include a <b>full explanation</b> and not just the final answer. The purpose of this page is only to give you feedback as quickly as possible to see if you need to review your work or see me or QUAILs at student hours or CLEAR tutoring sessions.
+
+<h3>Homework 1</h3>
+<ol>
+	<li value="2">
+		<button>View Answer</button>
+		<span class="answer">\(\int_0^1x^2dx\)</span>
+	</li>
+	<li value="4">
+		<button>View Answer</button>
+		<span class="answer">\(\int_0^1x^2dx\)</span>
+	</li>
+	<li value="6">
+		<button>View Answer</button>
+		<span class="answer">\(\int_0^1x^2dx\)</span>
+	</li>
+</ol>
+
+<script>
+	var buttons = document.getElementsByTagName("button");
+
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].onclick = function () {
+			if (this.classList.contains("activated")) {
+				this.classList.add("hidden");
+				this.parentElement.children[1].classList.add("shown");
+			} else {
+				this.classList.add("activated");
+				this.innerHTML += " <b>(Click again if you promise you tried it first)</b>";
+			}
+		}
+	}
+</script>
