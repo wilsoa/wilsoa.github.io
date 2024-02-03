@@ -72,8 +72,8 @@ function bind (name, x, f) {
                 f_err.innerHTML = "<b>Error:</b> This doesn't look like a number to me."
             } else {
 
-                if (input == x) {
-                    f_err.innerHTML = "<b>Error:</b> I can't provide an answer when x=" + x + ".";
+                if (Math.abs(input - x) < .0000000001) {
+                    f_err.innerHTML = "<b>Error:</b> I can't provide an answer so close to x=" + x + ".";
                 } else {
                     f_out.innerHTML += "<tr><td>" + input.toFixed(DECIMAL_PLACES) + "</td><td>" + f(input).toFixed(DECIMAL_PLACES) + "</td></tr>";
                     f_in.value = "";

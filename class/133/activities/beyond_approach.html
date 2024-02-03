@@ -3,7 +3,7 @@ title: Beyond Approach
 layout: bare
 ---
 
-For each of the following boxes, your goal is to guess the value of the function at the given input (e.g. for the first box, you want to find the value of \(f\) evaluated at \(x=2\)). You can use the text box to ask for the function's evaluation at any value <b>except</b> the input \(x\). <br /><br />
+For each of the following boxes, your goal is to guess the value of the function at the given input (e.g. for the first box, you want to find the value of \(f\) evaluated at \(x=2\)). You can use the text box to ask for the function's evaluation at any value <b>except</b> the input \(x\) (Note that numbers will be rounded to ten decimal places). <br /><br />
 
 
 <style>
@@ -77,7 +77,7 @@ For each of the following boxes, your goal is to guess the value of the function
     });
 
     bind("h", -1, function(x) {
-      return Math.exp(-1);
+      return Math.exp(x);
     });
 
     bind("p", 2, function(x) {
