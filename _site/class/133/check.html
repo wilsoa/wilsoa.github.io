@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <title> Homework Check &mdash; Alexander Wilson</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Homework Check</h1>
+    </header>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+<style>
+	.answer {
+		display: none;
+	}
+
+	.answer.shown {
+		display: block;
+	}
+
+	button.hidden {
+		display: none;
+	}
+
+
+	li {
+		margin-bottom: 5px;
+	}
+
+	button:hover {
+		cursor: pointer;
+	}
+
+	ul {
+		list-style: none;
+	}
+</style>
+
+Below, you can check your homework answers <b>after you have attempted the problem yourself</b>. Of course, your submission should include a <b>full explanation</b> and not just the final answer. The purpose of this page is only to give you feedback as quickly as possible to see if you need to review your work or see me or QUAILs at student hours or CLEAR tutoring sessions.
+
+
+<h3>Homework 1</h3>
+<ul>
+	
+		<li>
+			<b>Additional Problem 1 (a):</b> <button>Show Answer</button>
+			<span class="answer">$83.75/unit</span>
+		</li>
+	
+		<li>
+			<b>Additional Problem 2 (a):</b> <button>Show Answer</button>
+			<span class="answer">0m/s</span>
+		</li>
+	
+		<li>
+			<b>Additional Problem 2 (b):</b> <button>Show Answer</button>
+			<span class="answer">-10m/s</span>
+		</li>
+	
+		<li>
+			<b>2.2.30:</b> <button>Show Answer</button>
+			<span class="answer">\(\begin{array}{c|c}x&f(x)\\\hline 0.9&-1.9\\ 0.99&-1.99\\ 0.999&-1.999\\ 0.9999&-1.9999\\ 1.1&2.1\\ 1.01&2.01\\ 1.001&2.001\\ 1.00001&2.0001\end{array}\)</span>
+		</li>
+	
+		<li>
+			<b>2.2.31:</b> <button>Show Answer</button>
+			<span class="answer"><img title="A clip from the (original) Mean Girls movie where Cady exclaims that the limit does not exist." src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnQ3eGp0MGFlemFhMGlkNWNxNDExcHBqNmNyNWt4NGFudmJkOTdscyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2YWF00ZX8wOs0p0s/giphy.gif" /></span>
+		</li>
+	
+		<li>
+			<b>2.2.35:</b> <button>Show Answer</button>
+			<span class="answer">\(\lim_{x\to0}\frac{\sin(2x)}{x}=2\)</span>
+		</li>
+	
+		<li>
+			<b>2.2.36:</b> <button>Show Answer</button>
+			<span class="answer">\(\lim_{x\to0}\frac{\sin(3x)}{x}=3\)</span>
+		</li>
+	
+		<li>
+			<b>2.2.46:</b> <button>Show Answer</button>
+			<span class="answer">True</span>
+		</li>
+	
+		<li>
+			<b>2.2.47:</b> <button>Show Answer</button>
+			<span class="answer">False</span>
+		</li>
+	
+		<li>
+			<b>2.2.48:</b> <button>Show Answer</button>
+			<span class="answer">False</span>
+		</li>
+	
+		<li>
+			<b>2.2.49:</b> <button>Show Answer</button>
+			<span class="answer">False</span>
+		</li>
+	
+		<li>
+			<b>2.4.131:</b> <button>Show Answer</button>
+			<span class="answer">Infinite discontinuity at \(x=0\)</span>
+		</li>
+	
+		<li>
+			<b>2.4.132:</b> <button>Show Answer</button>
+			<span class="answer">No discontinuities</span>
+		</li>
+	
+		<li>
+			<b>2.4.133:</b> <button>Show Answer</button>
+			<span class="answer">Removable discontinuity at \(x=0\) and infinite discontinuity at \(x=1\)</span>
+		</li>
+	
+		<li>
+			<b>2.4.135:</b> <button>Show Answer</button>
+			<span class="answer">Infinite discontinuity at \(x=\ln(2)\)</span>
+		</li>
+	
+</ul>
+
+
+<script>
+	var buttons = document.getElementsByTagName("button");
+
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].onclick = function () {
+			if (this.classList.contains("activated")) {
+				this.classList.add("hidden");
+				this.parentElement.getElementsByTagName("span")[0].classList.add("shown");
+			} else {
+				this.classList.add("activated");
+				this.innerHTML += " <b>(Click again if you promise you tried it first)</b>";
+			}
+		}
+	}
+</script>
+</body>
+</html>

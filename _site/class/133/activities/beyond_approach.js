@@ -25,6 +25,7 @@ function bind (name, x, f) {
     var f_err = document.getElementById(name + "_err");
     var f_sort = document.getElementById(name + "_sort");
     var f_clear = document.getElementById(name + "_clear");
+    var f_sub = document.getElementById(name + "_sub");
 
     function reset_out (newHTML) {
         typeset(() => {
@@ -32,6 +33,34 @@ function bind (name, x, f) {
           return [f_out];
         });
     }
+
+    var frac_re = /^\s*([+\-]?[0-9]+)\/([0-9]+)\s*$/;
+
+    function submit () {
+        var input = f_in.value;
+
+        if (frac_re.test(input)) {
+            var m = input.match(frac_re);
+            input = (+m[1]) / (+m[2]);
+        }
+        else {
+            input = +input;
+        }
+
+        if (input != input) {
+            f_err.innerHTML = "<b>Error:</b> This doesn't look like a number to me."
+        } else {
+
+            if (Math.abs(input - x) < .0000000001) {
+                f_err.innerHTML = "<b>Error:</b> I can't provide an answer so close to x=" + x + ".";
+            } else {
+                f_out.innerHTML += "<tr><td>" + input.toFixed(DECIMAL_PLACES) + "</td><td>" + f(input).toFixed(DECIMAL_PLACES) + "</td></tr>";
+                f_in.value = "";
+            }
+        }
+    }
+
+    f_sub.onclick = submit;
 
     f_clear.onclick = function () {
         reset_out("");
@@ -66,19 +95,7 @@ function bind (name, x, f) {
         var keyCode = e.code || e.key;
 
         if (keyCode == 'Enter') {
-            input = +f_in.value;
-
-            if (input != input) {
-                f_err.innerHTML = "<b>Error:</b> This doesn't look like a number to me."
-            } else {
-
-                if (Math.abs(input - x) < .0000000001) {
-                    f_err.innerHTML = "<b>Error:</b> I can't provide an answer so close to x=" + x + ".";
-                } else {
-                    f_out.innerHTML += "<tr><td>" + input.toFixed(DECIMAL_PLACES) + "</td><td>" + f(input).toFixed(DECIMAL_PLACES) + "</td></tr>";
-                    f_in.value = "";
-                }
-            }
+            submit();
 
             return false;
         }

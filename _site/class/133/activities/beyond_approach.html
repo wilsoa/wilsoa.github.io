@@ -12,7 +12,7 @@
     <header>
         <h1>Beyond Approach</h1>
     </header>
-    For each of the following boxes, your goal is to guess the value of the function at the given input (e.g. for the first box, you want to find the value of \(f\) evaluated at \(x=2\)). You can use the text box to ask for the function's evaluation at any value <b>except</b> the input \(x\) (Note that numbers will be rounded to ten decimal places). <br /><br />
+    For each of the following boxes, your goal is to guess the value of the function at the given input (e.g. for the first box, you want to find the value of \(f\) evaluated at \(x=2\)). You can use the text box to ask for the function's evaluation at any value <b>except</b> the input \(x\) (Note that numbers will be rounded to ten decimal places). This activity is meant to accompany <a href="http://localhost:4001/class/133/pdf/Handout_24_2_7_Beyond_Approach.pdf">this handout</a>. <br /><br />
 
 
 <style>
@@ -34,37 +34,37 @@
 
 <div class="oracle">
   <h3>\(f(2)=?\)</h3>
-  <input id="f_in" /> <div id="f_err" class="error"></div>
+  <input id="f_in" /> <button id="f_sub">Submit</button> <div id="f_err" class="error"></div>
   <button id="f_sort">Sort Entries</button><button id="f_clear">Clear Entries</button>
   <table id="f_out"></table>
 </div>
 <div class="oracle">
   <h3>\(g(0.5)=?\)</h3>
-  <input id="g_in" /> <div id="g_err" class="error"></div>
+  <input id="g_in" /> <button id="g_sub">Submit</button> <div id="g_err" class="error"></div>
   <button id="g_sort">Sort Entries</button><button id="g_clear">Clear Entries</button>
   <table id="g_out"></table>
 </div>
 <div class="oracle">
   <h3>\(h(-1)=?\)</h3>
-  <input id="h_in" /> <div id="h_err" class="error"></div>
+  <input id="h_in" /> <button id="h_sub">Submit</button> <div id="h_err" class="error"></div>
   <button id="h_sort">Sort Entries</button><button id="h_clear">Clear Entries</button>
   <table id="h_out"></table>
 </div>
 <div class="oracle">
   <h3>\(p(2)=?\)</h3>
-  <input id="p_in" /> <div id="p_err" class="error"></div>
+  <input id="p_in" /> <button id="p_sub">Submit</button> <div id="p_err" class="error"></div>
   <button id="p_sort">Sort Entries</button><button id="p_clear">Clear Entries</button>
   <table id="p_out"></table>
 </div>
 <div class="oracle">
   <h3>\(q(1)=?\)</h3>
-  <input id="q_in" /> <div id="q_err" class="error"></div>
+  <input id="q_in" /> <button id="q_sub">Submit</button> <div id="q_err" class="error"></div>
   <button id="q_sort">Sort Entries</button><button id="q_clear">Clear Entries</button>
   <table id="q_out"></table>
 </div>
 <div class="oracle">
   <h3>\(r(0)=?\)</h3>
-  <input id="r_in" /> <div id="r_err" class="error"></div>
+  <input id="r_in" /> <button id="r_sub">Submit</button> <div id="r_err" class="error"></div>
   <button id="r_sort">Sort Entries</button><button id="r_clear">Clear Entries</button>
   <table id="r_out"></table>
 </div>
@@ -98,11 +98,7 @@
     });
 
     bind("q", 1, function(x) {
-      if (x < 1) {
-        return x * x;
-      } else {
-        return 2 - x;
-      }
+      return 1/((1-x)*(1-x))
     });
 
     bind("r", 0, function(x) {

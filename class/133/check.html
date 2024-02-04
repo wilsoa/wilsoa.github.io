@@ -1,0 +1,109 @@
+---
+title: Homework Check
+layout: bare
+
+hws:
+ - name: 1
+   problems:
+    - n: Additional Problem 1 (a)
+      a: $83.75/unit
+    - n: Additional Problem 2 (a)
+      a: 0m/s
+    - n: Additional Problem 2 (b)
+      a: -10m/s
+    - n: 2.2.30
+      a: \(\begin{array}{c|c}x&f(x)\\\hline
+         0.9&-1.9\\
+         0.99&-1.99\\
+         0.999&-1.999\\
+         0.9999&-1.9999\\
+         1.1&2.1\\
+         1.01&2.01\\
+         1.001&2.001\\
+         1.00001&2.0001\end{array}\)
+    - n: 2.2.31
+      a: <img title="A clip from the (original) Mean Girls movie where Cady exclaims that the limit does not exist." src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnQ3eGp0MGFlemFhMGlkNWNxNDExcHBqNmNyNWt4NGFudmJkOTdscyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2YWF00ZX8wOs0p0s/giphy.gif" />
+    - n: 2.2.35
+      a: \(\lim_{x\to0}\frac{\sin(2x)}{x}=2\)
+    - n: 2.2.36
+      a: \(\lim_{x\to0}\frac{\sin(3x)}{x}=3\)
+    - n: 2.2.46
+      a: "True"
+    - n: 2.2.47
+      a: "False"
+    - n: 2.2.48
+      a: "False"
+    - n: 2.2.49
+      a: "False"
+    - n: 2.4.131
+      a: Infinite discontinuity at \(x=0\)
+    - n: 2.4.132
+      a: No discontinuities
+    - n: 2.4.133
+      a: Removable discontinuity at \(x=0\) and infinite discontinuity at \(x=1\)
+    - n: 2.4.135
+      a: Infinite discontinuity at \(x=\ln(2)\)
+
+---
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+<style>
+	.answer {
+		display: none;
+	}
+
+	.answer.shown {
+		display: block;
+	}
+
+	button.hidden {
+		display: none;
+	}
+
+
+	li {
+		margin-bottom: 5px;
+	}
+
+	button:hover {
+		cursor: pointer;
+	}
+
+	ul {
+		list-style: none;
+	}
+</style>
+
+Below, you can check your homework answers <b>after you have attempted the problem yourself</b>. Of course, your submission should include a <b>full explanation</b> and not just the final answer. The purpose of this page is only to give you feedback as quickly as possible to see if you need to review your work or see me or QUAILs at student hours or CLEAR tutoring sessions.
+
+{% for hw in page.hws %}
+<h3>Homework {{hw.name}}</h3>
+<ul>
+	{% for prob in hw.problems %}
+		<li>
+			<b>{{prob.n}}:</b> <button>Show Answer</button>
+			<span class="answer">{{prob.a}}</span>
+		</li>
+	{% endfor %}
+</ul>
+{% endfor %}
+
+<script>
+	var buttons = document.getElementsByTagName("button");
+
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].onclick = function () {
+			if (this.classList.contains("activated")) {
+				this.classList.add("hidden");
+				this.parentElement.getElementsByTagName("span")[0].classList.add("shown");
+			} else {
+				this.classList.add("activated");
+				this.innerHTML += " <b>(Click again if you promise you tried it first)</b>";
+			}
+		}
+	}
+</script>
