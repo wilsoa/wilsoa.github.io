@@ -63,7 +63,7 @@ div.gallery {
         }
 
         div.gallery:hover {
-          border: 2px solid #777;
+          border: 4px solid #777;
         }
 
         div.gallery img {
@@ -87,10 +87,12 @@ div.header {
 }
 
 
-div.Tools, div.header.Tools:hover {border:2px solid #0085FF60}
-div.Miscellany, div.header.Miscellany:hover {border:2px solid #FF900060}
+div.Tools, div.header.Tools:hover {border:4px solid #0085FF60}
+div.Miscellany, div.header.Miscellany:hover {border:4px solid #9728a160}
+div.Student, div.header.Student:hover {border:4px solid #FF900060}
 div.header.Tools {background-color:#0085FFAA}
-div.header.Miscellany {background-color:#FF9000AA}
+div.header.Miscellany {background-color:#9728a1AA}
+div.header.Student {background-color:#FF9000AA}
 
 
 h2, h3 {display:block;margin-bottom:.1in;}
