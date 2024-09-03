@@ -118,3 +118,8 @@ ul {margin:0px}
   margin-top:50px;
   font-style: italic;
 }
+
+table.agenda td {
+  border: 1px solid black;
+  padding: 3px;
+}

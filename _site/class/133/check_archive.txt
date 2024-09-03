@@ -1,3 +1,12 @@
+    - n: 2.4.131
+      a: Infinite discontinuity at \(x=0\)
+    - n: 2.4.132
+      a: No discontinuities
+    - n: 2.4.133
+      a: Removable discontinuity at \(x=0\) and infinite discontinuity at \(x=1\)
+    - n: 2.4.135
+      a: Infinite discontinuity at \(x=\ln(2)\)
+
  - name: 2
    problems:
     - n: 3.1.33
