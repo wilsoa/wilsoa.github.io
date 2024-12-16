@@ -24,14 +24,30 @@ layout: bare
 </script>
 
 <style>
-		button {
+	button {
 		border: 1px solid #696969;
 		margin-left: .05in;
+		display:inline-block;
+		color: #222222;
+		text-align: center;
+		padding: 0;
+		height: 25px;
+		width: 25px;
 	}
+
+	#moves li {
+		margin-top: 0.1in;
+	}
+
+	#moves button {
+		height: 50px;
+		width: 50px;
+	}
+
 	.game button {
 		font-size: 25px;
-		width: 35px;
-		height: 35px;
+		width: 50px;
+		height: 50px;
 		margin-left:.1in;
 		cursor: pointer;
 	}
@@ -49,6 +65,24 @@ layout: bare
 	.game-wrapper .caption {
 		margin-top: .1in;
 	}
+
+	.failed {
+		animation: shake 0.5s;
+	}
+
+	@keyframes shake {
+  0% { transform: translate(1px, 0px) rotate(0deg); }
+  10% { transform: translate(-1px, 0) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 0px) rotate(0deg); }
+  40% { transform: translate(1px, 0px) rotate(1deg); }
+  50% { transform: translate(-1px, 0px) rotate(-1deg); }
+  60% { transform: translate(-3px, 0px) rotate(0deg); }
+  70% { transform: translate(3px, 0px) rotate(-1deg); }
+  80% { transform: translate(-1px, 0px) rotate(1deg); }
+  90% { transform: translate(1px, 0px) rotate(0deg); }
+  100% { transform: translate(1px, 0px) rotate(-1deg); }
+}
 </style>
 
 On this page, I describe a game I've dubbed <b>Fibonacci Split</b> inspired by a mathematical observation my collaborators and I came across in our research. I hope you'll play around with it and that it might in turn inspire more mathematical inquiry.
@@ -64,9 +98,9 @@ This sequence of numbers appears often both in mathematical research and in natu
 <h3>The Game</h3>
 
 While working on a paper, my co-authors and I encountered the identity $$F_{i} + F_{i+4} = 3F_{i+2}\text{ for }i\geq0,$$ and while verifying this identity, we found the process of splitting and re-combining the Fibonacci terms really fun! We can represent each Fibonacci term by a tile indicating its offset from the index $i$ (for example, $F_{i_4}$ corresponds to <button>4</button>). The Fibonacci recurrence allows us two kinds of moves for $n\geq2$:
-<ol>
- 	<li>splitting (<button>$n$</button>$\rightarrow$<button>$n-2$</button><button>$n-1$</button>), and</li>
- 	<li>combining (<button>$n-2$</button><button>$n-1$</button>$\rightarrow$<button>$n$</button>).</li>
+<ol id="moves">
+ 	<li><button>$n$</button>$\rightarrow$<button>$n-2$</button><button>$n-1$</button> ("splitting"), and</li>
+ 	<li><button>$n-2$</button><button>$n-1$</button>$\rightarrow$<button>$n$</button> ("combining").</li>
  </ol>
 
  Try applying these moves below (clicking twice on a tile to split and clicking on two tiles to combine) to see if you can verify the identity used in our paper (the end result should look like <button>2</button><button>2</button><button>2</button>).
@@ -153,7 +187,7 @@ Playing around with this game has raised some interesting questions for me. I'll
 			}
 			else
 			{
-				console.log("Failed to split", button);
+				shake(button)
 			}
 		}
 
@@ -170,8 +204,16 @@ Playing around with this game has raised some interesting questions for me. I'll
 			}
 			else
 			{
-				console.log("Failed to combine", button1, button2);
+				shake(button1);
+				shake(button2);
 			}
+		}
+
+		function shake (element) {
+			element.classList.add("failed");
+			setTimeout(function() {
+				element.classList.remove("failed");
+			}, 500)
 		}
 
 		var initial_target = null;
