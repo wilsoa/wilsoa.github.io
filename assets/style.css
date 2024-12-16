@@ -22,7 +22,7 @@ div.gallery .header {width: 100%, height:100%;}
             #navigation {float:right; margin-top:10px}
             #navigation a{margin-right:8px; margin-left:8px; display:inline;}
             div.gallery {width: 400px; height:300px}
-            div.gallery.mini {width:200px; height: 236px}
+            div.gallery.mini {width:200px; height: 250px}
             a.image{position: relative}
             a.image .title {
   position: absolute;
@@ -52,7 +52,7 @@ text-shadow: none}
 }
 
 div.gallery.mini div.desc {
-  font-size:14px;
+  font-size:16px;
 }
 
 div.gallery {
