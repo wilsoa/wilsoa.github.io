@@ -1,4 +1,4 @@
-body {margin: 3% auto; background: #f8f8f6; color: #222222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.4; text-shadow: 0 1px 0 #ffffff; max-width: 73%;}
+body {margin: 3% auto; background: #f8f8f6; color: #222222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.4; text-shadow: 0 1px 0 #ffffff; max-width: 90%;}
 a {color: #555555; text-decoration: none;}
 a.image{border-bottom: 0;}
 a:hover {color: #4297B3;}
@@ -16,8 +16,8 @@ div.gallery .header {width: 100%, height:100%;}
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-            #content {max-width: 73%;}
-            #portrait {float: right; max-width:25%;}
+            #content {max-width: 78%;}
+            #portrait {float: right; max-width:20%;}
             #portrait img {width: 100%; margin-bottom:5px;}
             #navigation {float:right; margin-top:10px}
             #navigation a{margin-right:8px; margin-left:8px; display:inline;}

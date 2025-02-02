@@ -9,16 +9,72 @@ portrait_caption: Taken by <a href="[roby]">Tom Roby</a> at the Discrete Math Da
 
 I am primarily interested in algebraic combinatorics, which aims to answer questions about algebraic structures through the use of combinatorial objects like graphs or tableaux. In particular, I apply these techniques to the area of representation theory.
 
+<div class="image-container">
+  <figure>
+    <a href="{{ site.url }}/assets/images/research/coloring_group.png"><img src="{{ site.url }}/assets/images/research/coloring_group.png" alt="A proper edge-coloring of a tree on 7 vertices along with the corresponding coloring group"></a>
+    <figcaption>From <a href="https://arxiv.org/abs/2312.03092">Coloring Groups</a></figcaption>
+  </figure>
+  <figure>
+    <a href="{{ site.url }}/assets/images/research/alternation_set_poset.png"><img src="{{ site.url }}/assets/images/research/alternation_set_poset.png" alt="A poset illustrating a recursive structure of Weyl alternation sets in type A"></a>
+    <figcaption>From <a href="https://arxiv.org/abs/2412.16820">The support of Kostant's weight multiplicity formula is an order ideal in the weak Bruhat order</a></figcaption>
+  </figure>
+  <figure>
+    <a href="{{ site.url }}/assets/images/research/super_rsk.png"><img src="{{ site.url }}/assets/images/research/super_rsk.png" alt="An example of applying super RSK inserting a value into a tableau"></a>
+    <figcaption>From <a href="https://arxiv.org/abs/2308.07238">Super Multiset RSK and a Mixed Multiset Partition Algebra</a></figcaption>
+  </figure>
+</div>
 
-<h2>Slides</h2>
+<style>
+.image-container {
+  display: flex;
+  justify-content: space-between; /* Spaces images evenly */
+  align-items: center; /* Aligns images in the center */
+  width: 100%;
+  text-align: center; /* Centers captions */
+}
+
+.image-container figure {
+  width: 32%; /* Adjust as needed */
+  margin:0px;
+}
+
+.image-container img {
+  width: 100%; /* Makes the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image-container figcaption {
+  margin-top: 8px; /* Adds spacing between image and caption */
+  font-size: 14px;
+  color: #555; /* Adjust color as needed */
+}
+
+/* Responsive Design: Stack images on small screens */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center images */
+  }
+
+  .image-container figure {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Adjust max width for better scaling */
+  }
+}
+
+</style>
+
+<h2>Selected Slides</h2>
 <ul>
+    <li>UW Madison Combinatorics Seminar Jan 27, 2025: The Structure of Weyl Alternation Sets [<a href="{{ site.url }}/assets/slides/2025.1.27 UW Madison Seminar.pdf">slides</a>]</li>
+    <li>AMS Eastern Fall Sectional 2024: Super Multiset RSK and a Mixed Multiset Partition Algebra [<a href="{{ site.url }}/assets/slides/EFS2024.pdf">slides</a>]</li>
     <li><a title="Spectra Survey of Math Conference" href="https://www.asc.ohio-state.edu/math/ssmc2024/">SSMC</a> Jun 6, 2024: Crystal Structures on Bitableaux (20min survey talk) [<a href="{{ site.url }}/assets/slides/2024.6.6 SSMC24.pdf">slides</a>]
     <li><a title="Graduate Online Combinatorics Colloquium" href="https://sites.google.com/view/gocc-combinatorics">GOCC</a> Feb 15, 2023: A Diagram-Like Basis for the Multiset Partition Algebra [<a href="https://www.youtube.com/watch?v=DezejWwhK7I&feature=youtu.be">video</a>] [<a href="{{ site.url }}/assets/slides/2023.2.15_GOCC_slides.pdf">slides</a>]</li>
     <li>JMM Jan 5, 2023: A Diagram-Like Basis for the Multiset Partition Algebra [<a href="{{ site.url }}/assets/slides/2023.1.5_jmm_slides.pdf">slides</a>]</li>
 </ul>
 
 <h2>Publications and preprints</h2>
-<ul>
+<ol>
     <li>The support of Kostant's weight multiplicity formula is an order ideal in the weak Bruhat order (with Portia X. Anderson, Esther Banaian, Melanie J. Ferreri, Owen C. Goff, Kimberly P. Hadaway, Pamela E. Harris, Kimberly J. Harry, Nicholas Mayers, Shiyun Wang), <i>preprint</i> [<a href="https://arxiv.org/abs/2412.16820">arXiv:2412.16820</a>]</li>
     <li>Centralizers in the Plactic Monoid (with <a href="https://users.math.msu.edu/users/bsagan/">Bruce E. Sagan</a>), <i><a>Semigroup Forum</a>, submitted</i> [<a href="https://arxiv.org/abs/2410.20460">arXiv:2410.20460</a>] [<a href="https://github.com/wilsoa/Centralizers-in-the-Plactic-Monoid">GitHub</a>]</li>
     <li>Coloring Groups (with <a href="[ben]">Ben Adenbaum</a>), <i>Discrete Mathematics & Theoretical Computer Science</i>, <b>vol. 26:2</b> (2024) [<a href="https://arxiv.org/abs/2312.03092">arXiv 2312.03092</a>] [<a href="https://github.com/wilsoa/Coloring-Groups">GitHub</a>]</li>
@@ -26,4 +82,4 @@ I am primarily interested in algebraic combinatorics, which aims to answer quest
     <li>A Diagram-Like Basis for the Multiset Partition Algebra, <i> Algebraic Combinatorics, Volume 7 (2024) no. 4, pp. 1225-1259.</i> [<a href="https://arxiv.org/abs/2307.01353">arXiv 2307.01353</a>]</li>
     <li>The Multiset Partition Algebra: Diagram-Like Bases and Representations. Ph.D. Thesis, Dartmouth College 2023 [<a href="{{ site.url }}/assets/documents/wilson_thesis.pdf">pdf</a>]</li>
     <li>Closed Forms of Recursive Polynomials and Applications (with M. Haver, K. Lee, W. McDermott, W. Yu, A. Zeleke), <i>Ars Combinatoria</i>, <b>142</b> (2019), 175-195.</li>
-</ul>
+</ol>
