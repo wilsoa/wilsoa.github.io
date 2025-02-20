@@ -123,3 +123,15 @@ table.agenda td {
   border: 1px solid black;
   padding: 3px;
 }
+
+.spoiler{
+  background-color: black;
+  color: transparent;
+  text-shadow:none;
+  user-select: none;
+}
+
+.spoiler:hover{
+  background-color: inherit;
+  color: inherit;
+}
