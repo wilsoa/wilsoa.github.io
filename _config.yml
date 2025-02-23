@@ -13,13 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Alexander Wilson
+title: Alexander N. Wilson
 email: niesswilson@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  I am a 5th year graduate student at Dartmouth College advised by Rosa Orellana.
-  My research is in combinatorial representation theory.
+  I am a visiting assistant professor at Oberlin College. I received my PhD from Dartmouth College advised by <a href="https://math.dartmouth.edu/~orellana/">Rosa Orellana</a>. My research is in combinatorial representation theory.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://wilsoa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alexandernwilson.com" # the base hostname & protocol for your site, e.g. http://example.com
 # github_username:  jekyll
 
 # Build settings
