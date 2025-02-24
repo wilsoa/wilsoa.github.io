@@ -119,6 +119,12 @@ ul {margin:0px}
   font-style: italic;
 }
 
+#gallery:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 table.agenda td {
   border: 1px solid black;
   padding: 3px;
