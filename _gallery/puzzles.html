@@ -1,0 +1,40 @@
+---
+layout: default
+title:  "Puzzles"
+categories: gallery
+blurb: Mathematically-inspired puzzles like group-theoretic Sudoku
+thumbnail: gengen_screenshot.png
+thumbnail_alt: A screenshot of a KenKen puzzle
+tag: Miscellany
+---
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+
+<h3 id="groupdoku">Groupdoku</h3>
+Inspired by the Groupdoku puzzles by <a href="https://quadratablog.blogspot.com/">David Nacin</a> (and looking for a way to entice my group theory students into reviewing a couple of concepts over spring break), I developed the following puzzle involving taking products in the symmetric group \(S_3\) and understanding its conjugacy classes.
+
+<center>
+  <a target="_blank" class="image" href="{{site.url}}/assets/documents/Conjugacy_Class_Groupdoku.pdf"><img src="{{site.url}}/assets/images/s3groupdoku.png" width=500px alt="A sudoku-style puzzle with dashed regions representing which elements are in the same conjugacy class." /></a>
+</center>
+
+<h3 id="gengen"><a href="https://wilsoa.github.io/Gengen">GenGen</a></h3>
+<a href="https://wilsoa.github.io/Gengen">Gengen</a> is a tool for generating KenKen puzzles (no promises that puzzles are solvable or have unique solutions). Because this was made by a couple of college math majors, we included some wonky options like playing on a torus.
