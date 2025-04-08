@@ -17,18 +17,19 @@ div.gallery .header {width: 100%, height:100%;}
 @media only screen and (min-width: 768px) {
   /* For desktop: */
             #content {max-width: 78%;}
+            #content.full {max-width: 100%;}
             #portrait {float: right; max-width:20%;}
             #portrait img {width: 100%; margin-bottom:5px;}
             #navigation {float:right; margin-top:10px}
             #navigation a{margin-right:8px; margin-left:8px; display:inline;}
-            div.gallery {width: 400px; height:300px}
+            div.gallery {width: 360px; height:270px}
             div.gallery.mini {width:200px; height: 250px}
             a.image{position: relative}
             a.image .title {
   position: absolute;
   bottom: 16px;
   left: 0px;
-  width:400px;
+  width:360px;
   color:white;
   text-weight:bold;
 background-color: #000000AA;
@@ -46,7 +47,7 @@ text-shadow: none}
 
             a.image img {width: 45%}
             a.image img.large {width: 800px}
-            div.gallery img {width: 600px; height:400px;}
+            div.gallery img {width: 480px; height:320px;}
             div.gallery.mini img {width: 200px; height:100px; }
             div.gallery .desc {margin-top:-12px}
 }

@@ -19,3 +19,23 @@ portrait_caption: Taken by <a href="https://www.thedartmouth.com/article/2021/11
     <li>Dartmouth Fall 2021: <a href="https://canvas.dartmouth.edu/courses/48609"><b>Math 3</b></a> Calculus</li>
     <li>Dartmouth Fall 2020: <a href="https://math.dartmouth.edu/~m1f20"><b>Math 1</b></a> Calculus with Algebra</li>
 </ul>
+
+<br />
+
+<div id="gallery">{% assign tags = "Teaching Tools" | split: "," %}
+
+{% for tag in tags %}
+    {% assign posts = site.gallery | where: "tag", tag %}
+
+    <div class="mini gallery header {{tag}}"><p>{{tag}}:</p></div>
+
+    {% for post in posts %}
+        <div class="mini gallery {{tag}}">
+          <a href="{%if post.external != nil %} {{ post.external }} {%else%} {{ post.url }} {%endif%}" class="image">
+            <img src="{{ site.domain }}/assets/images/thumbnails/{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}" width="600" height="400">
+            <div class="title">{{ post.title }}</div>
+          </a>
+          <div class="desc">{{ post.blurb }}</div>
+        </div>
+    {% endfor %}
+{% endfor %}</div>

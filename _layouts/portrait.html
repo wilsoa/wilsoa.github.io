@@ -6,19 +6,35 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="Content-Style-Type" content="text/css"/>
     <title>{% if page.title!="" %} {{ page.title }} &mdash; {%endif%}{{site.title}}</title>
-    <link rel="stylesheet" href="{{site.domain}}/assets/style.css?3" />
+    <link rel="stylesheet" href="{{site.domain}}/assets/style.css?2" />
 </head>
 <body>
     <header>       
         {% include navigation.html %}
         <h1><a href="{{site.url}}/">{{site.title}}</a></h1>
     </header>
+    <div id="portrait">
+        <picture>
+          <source media="(min-width: 768px)" srcset="{{ site.domain}}/assets/images/{{page.portrait}}" />
+          <img src="{{ site.domain}}/assets/images/{{page.portrait_mobile}}" alt="{{page.portrait_alt}}" />
+        </picture>
 
-    {% assign caption = page.portrait_caption %}
-    {% assign linkified_content = content %}
-    {% assign names = site.data.people.names | split: "," %}
+        {% assign caption = page.portrait_caption %}
+        {% assign linkified_content = content %}
+        {% assign names = site.data.people.names | split: "," %}
+
+        {% for name in names %}
+            {% assign key = "[x]" | replace : "x", name %}
+            {% assign caption = caption | replace: key,  site.data.people[name].url %}
+            {% assign linkified_content = linkified_content | replace: key,  site.data.people[name].url %}
+        {% endfor %}
+
+            <span>{{caption}}</span>
+
+            <br />
+    </div>
     {%if page.title != ""%}<h2>{{ page.title }}</h2>{%endif%}
-    <div id="content" class="full">
+    <div id="content">
         {{linkified_content}}
     </div>
     <div id="info">This site was last updated on {{ site.time | date: '%B %e, %Y' }}. It was created using <a href="https://jekyllrb.com/">Jekyll</a> with interactive components running on <a href="https://p5js.org/">p5.js</a>.</div>
