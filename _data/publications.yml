@@ -1,0 +1,46 @@
+- title: "Closed Forms of Recursive Polynomials and Applications (with M. Haver, K. Lee, W. McDermott, W. Yu, A. Zeleke)"
+  citation: "<i>Ars Combinatoria</i>, <b>142</b> (2019), 175-195"
+- title: "The Multiset Partition Algebra: Diagram-Like Bases and Representations"
+  citation: Ph.D. Thesis, Dartmouth College 2023
+  pdf: wilson_thesis.pdf
+- title: A Diagram-Like Basis for the Multiset Partition Algebra
+  citation: "<i> Algebraic Combinatorics</i>, Volume 7 (2024) no. 4, pp. 1225-1259"
+  arxiv: "2307.01353"
+  slides:
+    location: UW Milwaukee Colloquium Feb 14, 2025
+    pdf: 2025.2.24 Milwaukee Colloquium.pdf
+- title: "Super Multiset RSK and a Mixed Multiset Partition Algebra"
+  citation: <i><a href="http://www.combinatorics.org/">Electronic Journal of Combinatorics</a></i>, <b>31</b> (2024), no. 4, Paper No. 4.45
+  arxiv: "2308.07238"
+  github: "https://github.com/wilsoa/Super-multiset-RSK"
+  slides:
+    location: AMS Eastern Fall Sectional 2024
+    pdf: EFS2024.pdf
+- title: Coloring Groups
+  citation: <i>Discrete Mathematics & Theoretical Computer Science</i>, <b>vol. 26:2</b> (2024)
+  arxiv: "2312.03092"
+  github: https://github.com/wilsoa/Coloring-Groups
+  collaborators:
+    - ben
+- title: Centralizers in the Plactic Monoid
+  collaborators:
+    - bruce
+  citation: <i><a href="https://link.springer.com/article/10.1007/s00233-025-10535-0">Semigroup Forum</a></i> (2025)
+  arxiv: "2410.20460"
+  github: https://github.com/wilsoa/Centralizers-in-the-Plactic-Monoid
+- title: The support of Kostant's weight multiplicity formula is an order ideal in the weak Bruhat order (with P. X. Anderson, E. Banaian, M. J. Ferreri, O. C. Goff, K. P. Hadaway, P. E. Harris, K. J. Harry, N. Mayers, S. Wang)
+  citation: <i>preprint</i>
+  arxiv: "2412.16820"
+  slides:
+    location: UW Madison Combinatorics Seminar Jan 27, 2025
+    pdf: 2025.1.27 UW Madison Seminar.pdf
+- title: The defective parking space and defective Kreweras numbers (with R. E. Garcia, P. E. Harris, A. Moon, A. Ortiz, L. J. Quesada, C. M. Rivera Sánchez, D. A. Williams II)
+  citation: <i>Discrete Mathematics & Theoretical Computer Science, submitted</i>
+  arxiv: "2405.14635"
+- title: Kronecker Coefficients, Crystals, and Bitableaux
+  collaborators:
+    - nate
+  citation: <i>preprint</i>
+  slides:
+    location: '<a title="Spectra Survey of Math Conference" href="https://www.asc.ohio-state.edu/math/ssmc2024/">SSMC</a> Jun 6, 2024 (20min survey talk)'
+    pdf: 2024.6.6 SSMC24.pdf

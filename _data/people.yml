@@ -1,4 +1,4 @@
-names: "lizzie,brian,sammy,bethanne,roby,ben"
+names: "lizzie,brian,sammy,bethanne,roby,ben,bruce"
 lizzie:
   url: https://sites.google.com/view/lizziebuchanan/
 brian:
@@ -10,4 +10,11 @@ bethanne:
 roby:
   url: https://www2.math.uconn.edu/~troby/
 ben:
-  url: https://math.dartmouth.edu/~badenbaum/
+  url: https://badenbaum.github.io/
+  fullname: "Ben Adenbaum"
+bruce:
+  url: https://users.math.msu.edu/users/bsagan/
+  fullname: "Bruce E. Sagan"
+nate:
+  url: https://www.nateharman.com/
+  fullname: "Nate Harman"
