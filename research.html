@@ -52,6 +52,7 @@ li {
     {% if pub.pdf%} [<a href="{{ site.url }}/assets/documents/{{pub.pdf}}" class="arxiv">pdf</a>]{% endif %}
     {% if pub.github%} [<a href="{{pub.github}}" class="github">GitHub</a>]{% endif %}
     {% if pub.slides%} [<a href="{{ site.url }}/assets/slides/{{pub.slides.pdf}}" class="slides">Slides</a>, {{pub.slides.location}}]{% endif %}
+    {% if pub.poster%} [<a href="{{ site.url }}/assets/slides/{{pub.poster.url}}" class="slides">Poster</a>, {{pub.poster.location}}]{% endif %}
   </li>
     {% endfor %}
 </ol>
