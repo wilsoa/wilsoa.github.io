@@ -45,9 +45,7 @@ li {
 <ol>
     {% for pub in site.data.publications reversed %}
     <li>{{pub.title}}
-    {% if pub.collaborators%}
-      (with {% for name in pub.collaborators %} <a href="{{site.data.people[name].url}}">{{site.data.people[name].fullname}}</a>{% endfor %})
-    {% endif %}. {{pub.citation}}.
+    {% if pub.collaborators%}(with {% for name in pub.collaborators %} <a href="{{site.data.people[name].url}}">{{site.data.people[name].fullname}}</a>{% endfor %}){% endif %}. {{pub.citation}}.
     {% if pub.arxiv%} [<a href="https://arxiv.org/abs/{{pub.arxiv}}" class="arxiv">arXiv:{{pub.arxiv}}</a>]{% endif %}
     {% if pub.pdf%} [<a href="{{ site.url }}/assets/documents/{{pub.pdf}}" class="arxiv">pdf</a>]{% endif %}
     {% if pub.github%} [<a href="{{pub.github}}" class="github">GitHub</a>]{% endif %}

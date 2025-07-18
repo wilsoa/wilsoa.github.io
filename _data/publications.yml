@@ -4,20 +4,20 @@
   citation: Ph.D. Thesis, Dartmouth College 2023
   pdf: wilson_thesis.pdf
 - title: A Diagram-Like Basis for the Multiset Partition Algebra
-  citation: "<i> Algebraic Combinatorics</i>, Volume 7 (2024) no. 4, pp. 1225-1259"
+  citation: "<i><a href='https://alco.centre-mersenne.org/articles/10.5802/alco.364/'>Algebraic Combinatorics</a></i>, Volume 7 (2024) no. 4, pp. 1225-1259"
   arxiv: "2307.01353"
   slides:
     location: UW Milwaukee Colloquium Feb 14, 2025
     pdf: 2025.2.24 Milwaukee Colloquium.pdf
 - title: "Super Multiset RSK and a Mixed Multiset Partition Algebra"
-  citation: <i><a href="http://www.combinatorics.org/">Electronic Journal of Combinatorics</a></i>, <b>31</b> (2024), no. 4, Paper No. 4.45
+  citation: <i><a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v31i4p45">Electronic Journal of Combinatorics</a></i>, <b>31</b> (2024), no. 4, Paper No. 4.45
   arxiv: "2308.07238"
   github: "https://github.com/wilsoa/Super-multiset-RSK"
   slides:
     location: AMS Eastern Fall Sectional 2024
     pdf: EFS2024.pdf
 - title: Coloring Groups
-  citation: <i>Discrete Mathematics & Theoretical Computer Science</i>, <b>vol. 26:2</b> (2024)
+  citation: <i><a href="https://dmtcs.episciences.org/13869">Discrete Mathematics & Theoretical Computer Science</a></i>, <b>vol. 26:2</b> (2024)
   arxiv: "2312.03092"
   github: https://github.com/wilsoa/Coloring-Groups
   collaborators:
