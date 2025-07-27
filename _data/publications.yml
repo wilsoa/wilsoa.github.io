@@ -28,6 +28,10 @@
   citation: <i><a href="https://link.springer.com/article/10.1007/s00233-025-10535-0">Semigroup Forum</a></i> (2025)
   arxiv: "2410.20460"
   github: https://github.com/wilsoa/Centralizers-in-the-Plactic-Monoid
+- title: Centralizers in the Plactic Monoid
+  collaborators:
+    - bruce
+  citation: <a href="https://www.mat.univie.ac.at/~slc/wpapers/FPSAC2025/141.pdf"><i>Proceedings of FPSAC 2025, Sém. Lothar. Combin.</i> <b>93B</b> (2025), 12pp</a>
 - title: The support of Kostant's weight multiplicity formula is an order ideal in the weak Bruhat order (with P. X. Anderson, E. Banaian, M. J. Ferreri, O. C. Goff, K. P. Hadaway, P. E. Harris, K. J. Harry, N. Mayers, S. Wang)
   citation: <i>preprint</i>
   arxiv: "2412.16820"
