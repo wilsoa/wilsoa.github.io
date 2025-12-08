@@ -41,6 +41,11 @@
 - title: The defective parking space and defective Kreweras numbers (with R. E. Garcia, P. E. Harris, A. Moon, A. Ortiz, L. J. Quesada, C. M. Rivera Sánchez, D. A. Williams II)
   citation: <i>Discrete Mathematics & Theoretical Computer Science, submitted</i>
   arxiv: "2405.14635"
+- title: "Costello Divisibility: Exploration of a Comedic Division Algorithm"
+  pdf: "Costello_Divisibility.pdf"
+  collaborators:
+    - sam
+  citation: <i>College Mathematics Journal, to appear</i>
 - title: Kronecker Coefficients, Crystals, and Bitableaux
   arxiv: "2507.14026"
   collaborators:
