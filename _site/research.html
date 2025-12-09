@@ -56,13 +56,185 @@
 li {
   margin-bottom: .1in;
 }
+
+/*Okabe and Ito color palette for tags*/
+
+.tag {
+    padding:4px;
+    border-radius: 10px;
+    text-shadow: none;
+    color:black;
+    margin-left: 5px;
+    opacity: 0.5;
+}
+
+.tag:hover {
+    color: black;
+    opacity: 1;
+}
+
+.tag.parkingfunctions {
+    background-color: rgb(230,159,0);
+}
+.tag.lietheory {
+    background-color: rgb(86,180,233);
+}
+.tag.crystals {
+    background-color: rgb(240,228,66);
+}
+.tag.workwithundergrads {
+    background-color: rgb(213,94,0);
+}
+.tag.symmetricfunctions {
+    background-color: rgb(204,121,167);
+}
+.tag.representationdualities {
+    background-color: rgb(0,158,115);
+}
+
+
+
+
+    .filtered li {
+        display: none;
+    }
+
+
+
+    .representationdualities.filtered li.representationdualities {
+        display: list-item;
+    }
+
+    .representationdualities .representationdualities {
+        opacity: 1;
+    }
+
+
+    .parkingfunctions.filtered li.parkingfunctions {
+        display: list-item;
+    }
+
+    .parkingfunctions .parkingfunctions {
+        opacity: 1;
+    }
+
+
+    .lietheory.filtered li.lietheory {
+        display: list-item;
+    }
+
+    .lietheory .lietheory {
+        opacity: 1;
+    }
+
+
+    .crystals.filtered li.crystals {
+        display: list-item;
+    }
+
+    .crystals .crystals {
+        opacity: 1;
+    }
+
+
+    .workwithundergrads.filtered li.workwithundergrads {
+        display: list-item;
+    }
+
+    .workwithundergrads .workwithundergrads {
+        opacity: 1;
+    }
+
+
+    .symmetricfunctions.filtered li.symmetricfunctions {
+        display: list-item;
+    }
+
+    .symmetricfunctions .symmetricfunctions {
+        opacity: 1;
+    }
+
+
+.parkingfunctions .tag.parkingfunctions {
+    opacity: 1;
+}
+
+#tags {
+    display: inline-block;
+}
+
 </style>
 
 <h2>Publications, Preprints, and Selected Slides</h2>
+<div id = "researchlist">
 
-<ol>
+
+
+Topics: <div id="tags">
+    <a class='tag representationdualities' href='#'>Representation Dualities</a>
+
+    <a class='tag parkingfunctions' href='#'>Parking Functions</a>
+
+    <a class='tag lietheory' href='#'>Lie Theory</a>
+
+    <a class='tag crystals' href='#'>Crystals</a>
+
+    <a class='tag workwithundergrads' href='#'>Work with Undergrads</a>
+
+    <a class='tag symmetricfunctions' href='#'>Symmetric Functions</a>
+<a class='tag none' href="#">Clear Filter</a></div>
+
+<script>
+    var tags = document.getElementById("tags");
+    var researchlist = document.getElementById("researchlist");
+    var tagnames = ['representationdualities', 'parkingfunctions', 'lietheory', 'crystals', 'workwithundergrads', 'symmetricfunctions', ]
+    var current_tag = null;
+
+    tags.onclick = function (e) {
+        var tag = e.target.classList[1];
+        if (tag == current_tag || tag == "none") {
+            removeFilters();
+        }
+        else
+        {
+            restrictToTag(tag);
+        }
+    }
+
+    function removeFilters () {
+        for (var i = 0; i < tagnames.length; i++) {
+            researchlist.classList.remove(tagnames[i])
+        }
+        researchlist.classList.remove("filtered");
+    }
+
+    function restrictToTag (tag) {
+        current_tag = tag;
+        removeFilters();
+        researchlist.classList.add(tag)
+        researchlist.classList.add("filtered")
+    }
+
+    if (window.location.hash.slice(3)) {
+
+    }
+</script>
+
+
+<ol id="researchlist">
     
-    <li>Kronecker Coefficients, Crystals, and Bitableaux
+    
+    <li class='parkingfunctions '>A Pollak Proof for the Number of Weakly Increasing Parking Functions
+    (with  <a href="https://jcmartinezmori.github.io/">J. Carlos Martinez Mori</a> <a href="https://www.pamelaeharris.com/">Pamela E. Harris</a>). <i>preprint</i>.
+     [<a href="https://arxiv.org/abs/2511.20796" class="arxiv">arXiv:2511.20796</a>]
+    
+    
+    
+    
+  </li>
+    
+    
+    <li class='lietheory crystals '>Kronecker Coefficients, Crystals, and Bitableaux
     (with  <a href="https://www.nateharman.com/">Nate Harman</a>). <i>preprint</i>.
      [<a href="https://arxiv.org/abs/2507.14026" class="arxiv">arXiv:2507.14026</a>]
     
@@ -71,7 +243,8 @@ li {
     
   </li>
     
-    <li>Costello Divisibility: Exploration of a Comedic Division Algorithm
+    
+    <li class='workwithundergrads '>Costello Divisibility: Exploration of a Comedic Division Algorithm
     (with  <a href="https://stolenquotient2.github.io/">Sam Thiel</a>). <i>College Mathematics Journal, to appear</i>.
     
      [<a href="http://localhost:4000/assets/documents/Costello_Divisibility.pdf" class="arxiv">pdf</a>]
@@ -80,7 +253,8 @@ li {
     
   </li>
     
-    <li>The defective parking space and defective Kreweras numbers (with R. E. Garcia, P. E. Harris, A. Moon, A. Ortiz, L. J. Quesada, C. M. Rivera Sánchez, D. A. Williams II)
+    
+    <li class='parkingfunctions symmetricfunctions '>The defective parking space and defective Kreweras numbers (with R. E. Garcia, P. E. Harris, A. Moon, A. Ortiz, L. J. Quesada, C. M. Rivera Sánchez, D. A. Williams II)
     . <i>Discrete Mathematics & Theoretical Computer Science, submitted</i>.
      [<a href="https://arxiv.org/abs/2405.14635" class="arxiv">arXiv:2405.14635</a>]
     
@@ -89,7 +263,8 @@ li {
     
   </li>
     
-    <li>The support of Kostant's weight multiplicity formula is an order ideal in the weak Bruhat order (with P. X. Anderson, E. Banaian, M. J. Ferreri, O. C. Goff, K. P. Hadaway, P. E. Harris, K. J. Harry, N. Mayers, S. Wang)
+    
+    <li class='lietheory '>The support of Kostant's weight multiplicity formula is an order ideal in the weak Bruhat order (with P. X. Anderson, E. Banaian, M. J. Ferreri, O. C. Goff, K. P. Hadaway, P. E. Harris, K. J. Harry, N. Mayers, S. Wang)
     . <i>preprint</i>.
      [<a href="https://arxiv.org/abs/2412.16820" class="arxiv">arXiv:2412.16820</a>]
     
@@ -98,7 +273,8 @@ li {
     
   </li>
     
-    <li>Centralizers in the Plactic Monoid
+    
+    <li class='crystals '>Centralizers in the Plactic Monoid
     (with  <a href="https://users.math.msu.edu/users/bsagan/">Bruce E. Sagan</a>). <a href="https://www.mat.univie.ac.at/~slc/wpapers/FPSAC2025/141.pdf"><i>Proceedings of FPSAC 2025, Sém. Lothar. Combin.</i> <b>93B</b> (2025), 12pp</a>.
     
     
@@ -107,7 +283,8 @@ li {
     
   </li>
     
-    <li>Centralizers in the Plactic Monoid
+    
+    <li class='crystals '>Centralizers in the Plactic Monoid
     (with  <a href="https://users.math.msu.edu/users/bsagan/">Bruce E. Sagan</a>). <i><a href="https://link.springer.com/article/10.1007/s00233-025-10535-0">Semigroup Forum</a></i> (2025).
      [<a href="https://arxiv.org/abs/2410.20460" class="arxiv">arXiv:2410.20460</a>]
     
@@ -116,7 +293,8 @@ li {
     
   </li>
     
-    <li>Coloring Groups
+    
+    <li class='dynamicalalgebraiccombinatorics '>Coloring Groups
     (with  <a href="https://badenbaum.github.io/">Ben Adenbaum</a>). <i><a href="https://dmtcs.episciences.org/13869">Discrete Mathematics & Theoretical Computer Science</a></i>, <b>vol. 26:2</b> (2024).
      [<a href="https://arxiv.org/abs/2312.03092" class="arxiv">arXiv:2312.03092</a>]
     
@@ -125,7 +303,8 @@ li {
     
   </li>
     
-    <li>Super Multiset RSK and a Mixed Multiset Partition Algebra
+    
+    <li class='representationdualities symmetricfunctions '>Super Multiset RSK and a Mixed Multiset Partition Algebra
     . <i><a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v31i4p45">Electronic Journal of Combinatorics</a></i>, <b>31</b> (2024), no. 4, Paper No. 4.45.
      [<a href="https://arxiv.org/abs/2308.07238" class="arxiv">arXiv:2308.07238</a>]
     
@@ -134,7 +313,8 @@ li {
     
   </li>
     
-    <li>A Diagram-Like Basis for the Multiset Partition Algebra
+    
+    <li class='representationdualities '>A Diagram-Like Basis for the Multiset Partition Algebra
     . <i><a href='https://alco.centre-mersenne.org/articles/10.5802/alco.364/'>Algebraic Combinatorics</a></i>, Volume 7 (2024) no. 4, pp. 1225-1259.
      [<a href="https://arxiv.org/abs/2307.01353" class="arxiv">arXiv:2307.01353</a>]
     
@@ -143,7 +323,8 @@ li {
     
   </li>
     
-    <li>The Multiset Partition Algebra: Diagram-Like Bases and Representations
+    
+    <li class='representationdualities '>The Multiset Partition Algebra: Diagram-Like Bases and Representations
     . Ph.D. Thesis, Dartmouth College 2023.
     
      [<a href="http://localhost:4000/assets/documents/wilson_thesis.pdf" class="arxiv">pdf</a>]
@@ -152,7 +333,8 @@ li {
     
   </li>
     
-    <li>Closed Forms of Recursive Polynomials and Applications (with M. Haver, K. Lee, W. McDermott, W. Yu, A. Zeleke)
+    
+    <li class='representationdualities '>Closed Forms of Recursive Polynomials and Applications (with M. Haver, K. Lee, W. McDermott, W. Yu, A. Zeleke)
     . <i>Ars Combinatoria</i>, <b>142</b> (2019), 175-195.
     
     
@@ -162,6 +344,9 @@ li {
   </li>
     
 </ol>
+
+</div>
+
 <h2>Pictures</h2>
 <link rel="stylesheet" href="http://localhost:4000/assets/carousel.css" />
 
@@ -293,7 +478,7 @@ li {
     });
 </script>
     </div>
-    <div id="info">This site was last updated on December  8, 2025. It was created using <a href="https://jekyllrb.com/">Jekyll</a> with interactive components running on <a href="https://p5js.org/">p5.js</a>.</div>
+    <div id="info">This site was last updated on December  9, 2025. It was created using <a href="https://jekyllrb.com/">Jekyll</a> with interactive components running on <a href="https://p5js.org/">p5.js</a>.</div>
 </body>
 </html>
 

@@ -1,4 +1,4 @@
-names: "lizzie,brian,sammy,bethanne,roby,ben,bruce"
+names: "lizzie,brian,sammy,bethanne,roby,ben,bruce,sam,pamela,carlos"
 lizzie:
   url: https://sites.google.com/view/lizziebuchanan/
 brian:
@@ -21,3 +21,9 @@ nate:
 sam:
   url: https://stolenquotient2.github.io/
   fullname: "Sam Thiel"
+pamela:
+  url: https://www.pamelaeharris.com/
+  fullname: Pamela E. Harris
+carlos:
+  url: https://jcmartinezmori.github.io/
+  fullname: J. Carlos Martinez Mori

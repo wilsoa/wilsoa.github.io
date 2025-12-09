@@ -38,13 +38,120 @@ I am primarily interested in algebraic combinatorics, which aims to answer quest
 li {
   margin-bottom: .1in;
 }
+
+/*Okabe and Ito color palette for tags*/
+
+.tag {
+    padding:4px;
+    border-radius: 10px;
+    text-shadow: none;
+    color:black;
+    margin-left: 5px;
+    opacity: 0.5;
+}
+
+.tag:hover {
+    color: black;
+    opacity: 1;
+}
+
+.tag.parkingfunctions {
+    background-color: rgb(230,159,0);
+}
+.tag.lietheory {
+    background-color: rgb(86,180,233);
+}
+.tag.crystals {
+    background-color: rgb(240,228,66);
+}
+.tag.workwithundergrads {
+    background-color: rgb(213,94,0);
+}
+.tag.symmetricfunctions {
+    background-color: rgb(204,121,167);
+}
+.tag.representationdualities {
+    background-color: rgb(0,158,115);
+}
+
+
+{% assign tags = "Representation Dualities, Parking Functions, Lie Theory, Crystals, Work with Undergrads, Symmetric Functions" | split: ", "%}
+
+    .filtered li {
+        display: none;
+    }
+
+{% for tag in tags %}
+
+    .{{tag|downcase|replace: " ", ""}}.filtered li.{{tag|downcase|replace: " ", ""}} {
+        display: list-item;
+    }
+
+    .{{tag|downcase|replace: " ", ""}} .{{tag|downcase|replace: " ", ""}} {
+        opacity: 1;
+    }
+{% endfor %}
+
+.parkingfunctions .tag.parkingfunctions {
+    opacity: 1;
+}
+
+#tags {
+    display: inline-block;
+}
+
 </style>
 
 <h2>Publications, Preprints, and Selected Slides</h2>
+<div id = "researchlist">
 
-<ol>
+
+
+Topics: <div id="tags">{% for tag in tags %}
+    <a class='tag {{tag|downcase|replace: " ", ""}}' href='#'>{{tag}}</a>
+{% endfor %}<a class='tag none' href="#">Clear Filter</a></div>
+
+<script>
+    var tags = document.getElementById("tags");
+    var researchlist = document.getElementById("researchlist");
+    var tagnames = [{% for tag in tags %}'{{tag|downcase|replace: " ", ""}}', {% endfor %}]
+    var current_tag = null;
+
+    tags.onclick = function (e) {
+        var tag = e.target.classList[1];
+        if (tag == current_tag || tag == "none") {
+            removeFilters();
+        }
+        else
+        {
+            restrictToTag(tag);
+        }
+    }
+
+    function removeFilters () {
+        for (var i = 0; i < tagnames.length; i++) {
+            researchlist.classList.remove(tagnames[i])
+        }
+        researchlist.classList.remove("filtered");
+    }
+
+    function restrictToTag (tag) {
+        current_tag = tag;
+        removeFilters();
+        researchlist.classList.add(tag)
+        researchlist.classList.add("filtered")
+    }
+
+    if (window.location.hash.slice(3)) {
+
+    }
+</script>
+
+
+<ol id="researchlist">
     {% for pub in site.data.publications reversed %}
-    <li>{{pub.title}}
+    {% if pub.tags%} {% assign tags = pub.tags | split: ", " %}{% endif %}
+    <li class='{% for tag in tags %}{{tag|downcase|replace: " ", ""}} {% endfor %}'>{{pub.title}}
     {% if pub.collaborators%}(with {% for name in pub.collaborators %} <a href="{{site.data.people[name].url}}">{{site.data.people[name].fullname}}</a>{% endfor %}){% endif %}. {{pub.citation}}.
     {% if pub.arxiv%} [<a href="https://arxiv.org/abs/{{pub.arxiv}}" class="arxiv">arXiv:{{pub.arxiv}}</a>]{% endif %}
     {% if pub.pdf%} [<a href="{{ site.url }}/assets/documents/{{pub.pdf}}" class="arxiv">pdf</a>]{% endif %}
@@ -54,6 +161,9 @@ li {
   </li>
     {% endfor %}
 </ol>
+
+</div>
+
 <h2>Pictures</h2>
 <link rel="stylesheet" href="{{site.url}}/assets/carousel.css" />
 

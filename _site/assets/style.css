@@ -142,3 +142,23 @@ table.agenda td {
   background-color: inherit;
   color: inherit;
 }
+
+/* Dark theme */
+
+body.dark-theme {
+  color: #eee;
+  background: #121212;
+  text-shadow: #000;
+}
+
+body.dark-theme .gallery {
+  background: #222;
+}
+
+body.dark-theme a {
+  color: #aaa;
+}
+
+body.dark-theme h3 {
+  color: #bbb;
+}
