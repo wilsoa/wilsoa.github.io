@@ -22,7 +22,7 @@ When two halves are shuffled together, the result should feel like a cohesive wh
 ## Choosing a Theme: Artifacts
 For my first attempt at this kind of project, I figured I should make things easier on myself by choosing partners that have some mechanical overlap. Looking over the options, one word that appears on a partner of each color is "artifact," so I let that word be my guiding theme.
 
-<img class="portrait" src="https://cards.scryfall.io/large/front/7/2/728b802c-969b-4865-b7a0-871c585d097a.jpg?1721690827" />
+<img class="portrait" src="{{site.url}}/assets/images/blog/cmr-10-ardenn-intrepid-archaeologist.png" />
 
 ## White: Ardenn, Intrepid Archaeologist
 While [Rebbec, Architect of Ascension](https://scryfall.com/card/cmr/42/rebbec-architect-of-ascension) is the white partner that actually has "artifact" in its rules text, I figured Ardenn's more specific theme of equipment would help to focus the project.
@@ -30,7 +30,13 @@ While [Rebbec, Architect of Ascension](https://scryfall.com/card/cmr/42/rebbec-a
 I want to leverage Ardenn's ability to put equipment on an *opponent's* creatures. One way to utilize this ability is to suit up an opposing creature, then goad it. Because white has few ways to goad a creature, we will look to the other halves (particularly red) to include some goad support to synergize with this game plan.
 
 Another reason one might want to equip their opponents' creatures is to laden them with detrimental equipment.
-(Images: Skullclamp, Cement Shoes, Captain's Hook)
+
+<div class="cardgallery">
+	<img src="{{site.url}}/assets/images/blog/tdc-103-skullclamp.png" />
+	<img src="{{site.url}}/assets/images/blog/snc-235-cement-shoes.png" />
+	<img src="{{site.url}}/assets/images/blog/rix-177-captain-s-hook.png" />
+</div>
+
 If an opponent's creature equipped with my Skullclamp dies, *I* draw the two cards. Cement Shoes and similar equipment can lock down an opponent's creature. Whenever we move Captain's Hook off of an opponent's creature, they have to sacrifice that creature. The additional effect of making a creature a pirate segues well into our next choice of partner.
 
 
@@ -38,12 +44,19 @@ If an opponent's creature equipped with my Skullclamp dies, *I* draw the two car
 
 ## Blue: Malcolm, Keen-Eyed Navigator
 Malcolm's game plan is to create a bunch of treasures. 
+We are avoiding cards that statically count the number of artifacts on the field because in some combinations, we will want to feel free to sacrifice artifacts often. Instead, we focus on cards that trigger upon an artifact entering the battlefield.
 
-We are avoiding cards that statically count the number of artifacts on the field because in some combinations, we will want to feel free to sacrifice artifacts often.
+<div class="cardgallery">
+	<img src="{{site.url}}/assets/images/blog/eoc-74-kappa-cannoneer.png" />
+	<img src="{{site.url}}/assets/images/blog/mkc-107-junk-winder.png" />
+</div>
+
 ## Black: Keskit, the Flesh Sculptor
 (Image: Keskit)
+
 ## Red: Toggo, Goblin Weaponsmith
 (image: Toggo)
+
 ## Green: Ich-Tekik, Salvage Splicer
 (image: Ich-Tekik)
 Ich-Tekik wants to do two things: make golems and make tokens that can innately be sacrificed.
@@ -102,8 +115,13 @@ These two already have a great deal of overlap in that one creates equipment and
 
 - Looting effects to get you past irrelevant cards?
 - Tutors to find pieces
+
+## Try It Out
+
+Choose two partners to see their decklist. 
+
 <div id="playtest">
-	<img id="ardenn" src="https://cards.scryfall.io/large/front/7/2/728b802c-969b-4865-b7a0-871c585d097a.jpg?1721690827" />
+	<img id="ardenn" src="{{site.url}}/assets/images/blog/cmr-10-ardenn-intrepid-archaeologist.png" />
 	<img id="malcolm" src="https://cards.scryfall.io/large/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1608909299" />
 	<img id="keskit" src="https://cards.scryfall.io/large/front/a/9/a9ecbf55-1f85-4877-a1ea-bf0d90dd9979.jpg?1682209080" />
 	<img id="toggo" src="https://cards.scryfall.io/large/front/1/a/1a05b3e2-259e-4fce-92ee-c00660e22ae7.jpg?1665822993" />
@@ -140,19 +158,21 @@ These two already have a great deal of overlap in that one creates equipment and
 }
 
 .glow {
-	-webkit-box-shadow:0px 0px 26px 2px rgba(255,196,45,0.9);
--moz-box-shadow: 0px 0px 26px 2px rgba(45,255,196,0.9);
-box-shadow: 0px 0px 26px 2px rgba(255,196,45,0.9);
+	transform: translate(0px, 30px);
 }
 
 #playtest img:hover {
 	cursor:pointer;
-	transform: scale(1.2);
+	transform: scale(1.1);
+}
+
+#playtest img:hover.glow {
+	transform: scale(1.1) translate(0px, 30px);
 }
 
 .portrait {
 	float:right;
-	height:12em;
+	height:24em;
 }
 
 #skeletonsheet {
@@ -163,6 +183,17 @@ box-shadow: 0px 0px 26px 2px rgba(255,196,45,0.9);
 
 #skeletonsheet.hidden {
 	display: none;
+}
+
+.cardgallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardgallery img {
+	width: 30%;
+	margin:auto;
 }
 
 </style>
