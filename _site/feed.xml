@@ -1,1 +1,290 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-09T09:24:02-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Alexander N. Wilson</title><subtitle>I am a visiting assistant professor at Oberlin College. I received my PhD from Dartmouth College advised by &lt;a href=&quot;https://math.dartmouth.edu/~orellana/&quot;&gt;Rosa Orellana&lt;/a&gt;. My research is in combinatorial representation theory.</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-14T17:48:04-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Alexander N. Wilson</title><subtitle>I am a visiting assistant professor at Oberlin College. I received my PhD from Dartmouth College advised by &lt;a href=&quot;https://math.dartmouth.edu/~orellana/&quot;&gt;Rosa Orellana&lt;/a&gt;. My research is in combinatorial representation theory.</subtitle><entry><title type="html">Jump Start Commander</title><link href="http://localhost:4000/2025/12/13/jumpstart.html" rel="alternate" type="text/html" title="Jump Start Commander" /><published>2025-12-13T00:00:00-05:00</published><updated>2025-12-13T00:00:00-05:00</updated><id>http://localhost:4000/2025/12/13/jumpstart</id><content type="html" xml:base="http://localhost:4000/2025/12/13/jumpstart.html">&lt;p&gt;When it comes to building commander decks, I lean toward the esoteric. I think of each deck concept as a puzzle and each game as an opportunity to show off a hard-won solution. With this project, I wanted to deconstruct the very concept of a deck a little—what if a deck could actually be ten decks?&lt;/p&gt;
+
+&lt;p&gt;I played bit of the Jumpstart product, in which two packs from a list of different themes are shuffled together to form a ready-to-play 40 card deck. I slowly worked through a box of Jumpstart 2024 with one of my former students over the course of a few weeks, and I was impressed by the replayability. In particular, how playing the same pack twice paired with different themes created very different experiences.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Inspired by Jumpstart, this project consists of a set half-decks, each helmed by a partner commander. One must be able to take any two of these half decks, shuffle them together, and have a functional commander deck.&lt;/p&gt;
+&lt;h2 id=&quot;some-considerations-and-constraints&quot;&gt;Some Considerations and Constraints&lt;/h2&gt;
+&lt;p&gt;One consideration has to do with logistic: the decks must be separable back into its two halves.  Another concerns scope: the more half-decks in the set, the more complicated the interactions between them are. In light of these two considerations, I settled on five mono-color half-decks. My options for partners are then covered by the following Scryfall query.
+&lt;a href=&quot;https://scryfall.com/search?q=o%3Apartner+-o%3A%22partner+with%22+-o%3A%22partner%E2%80%94%22+ci%3D1+legal%3Acommander&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o:partner -o:&quot;partner with&quot; -o:&quot;partner—&quot; ci=1 legal:commander&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;skeleton&quot;&gt;Skeleton&lt;/h2&gt;
+&lt;p&gt;When two halves are shuffled together, the result should feel like a cohesive whole. With this goal in mind, we want to place cards in each half that play well with other halves. Specifically, each half will have six cards chosen to synergize with each other half. For example, the white half will have six cards that work well with the blue half, six for the black half, and so on for the red and green halves. This leaves 25 cards: eight cards making up the “core” strategy of the half and 17 lands. &lt;button id=&quot;skeletontoggle&quot;&gt;Toggle Skeleton Spreadsheet&lt;/button&gt;&lt;/p&gt;
+
+&lt;div id=&quot;skeletonsheet&quot; class=&quot;hidden&quot;&gt;
+&lt;style type=&quot;text/css&quot;&gt;.ritz .waffle a { color: inherit; }.ritz .waffle .s0{text-align:left;color:#000000;font-family:Arial;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s5{background-color:#d9ead3;text-align:left;color:#000000;font-family:Arial;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s7{text-align:left;color:#0c0c14;font-family:Arial;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s2{background-color:#c9daf8;text-align:left;color:#000000;font-family:Arial;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s4{background-color:#f4cccc;text-align:left;color:#000000;font-family:Arial;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s6{background-color:#000000;text-align:left;color:#000000;font-family:Arial;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s3{background-color:#cccccc;text-align:left;color:#000000;font-family:Arial;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s1{background-color:#fff2cc;text-align:left;color:#000000;font-family:Arial;font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}&lt;/style&gt;&lt;div class=&quot;ritz grid-container&quot; dir=&quot;ltr&quot;&gt;&lt;table class=&quot;waffle&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;row-header freezebar-vertical-handle&quot;&gt;&lt;/th&gt;&lt;th id=&quot;0C0&quot; style=&quot;width:100px;&quot; class=&quot;column-headers-background&quot;&gt;A&lt;/th&gt;&lt;th id=&quot;0C1&quot; style=&quot;width:100px;&quot; class=&quot;column-headers-background&quot;&gt;B&lt;/th&gt;&lt;th id=&quot;0C2&quot; style=&quot;width:100px;&quot; class=&quot;column-headers-background&quot;&gt;C&lt;/th&gt;&lt;th id=&quot;0C3&quot; style=&quot;width:100px;&quot; class=&quot;column-headers-background&quot;&gt;D&lt;/th&gt;&lt;th id=&quot;0C4&quot; style=&quot;width:100px;&quot; class=&quot;column-headers-background&quot;&gt;E&lt;/th&gt;&lt;th id=&quot;0C5&quot; style=&quot;width:100px;&quot; class=&quot;column-headers-background&quot;&gt;F&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R0&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;1&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Partner:&lt;/td&gt;&lt;td class=&quot;s1&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s2&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s3&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s4&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s5&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;height:3px;&quot; class=&quot;freezebar-cell freezebar-horizontal-handle&quot;&gt;&lt;/th&gt;&lt;td class=&quot;freezebar-cell&quot;&gt;&lt;/td&gt;&lt;td class=&quot;freezebar-cell&quot;&gt;&lt;/td&gt;&lt;td class=&quot;freezebar-cell&quot;&gt;&lt;/td&gt;&lt;td class=&quot;freezebar-cell&quot;&gt;&lt;/td&gt;&lt;td class=&quot;freezebar-cell&quot;&gt;&lt;/td&gt;&lt;td class=&quot;freezebar-cell&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R1&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;2&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Core&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R2&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;3&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Core&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R3&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;4&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Core&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R4&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;5&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Core&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R5&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;6&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Core&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R6&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;7&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Core&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R7&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;8&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Core&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R8&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;9&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Core&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R9&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;10&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s1&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R10&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;11&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s1&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R11&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;12&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s1&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R12&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;13&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s1&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R13&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;14&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s1&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R14&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;15&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s1&quot;&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R15&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;16&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s2&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R16&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;17&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s2&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R17&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;18&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s2&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R18&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;19&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s2&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R19&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;20&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s2&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R20&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;21&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s2&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R21&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;22&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s3&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R22&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;23&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s3&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R23&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;24&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s3&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R24&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;25&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s3&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R25&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;26&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s3&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R26&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;27&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s3&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R27&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;28&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s4&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R28&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;29&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s4&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R29&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;30&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s4&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R30&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;31&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s4&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R31&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;32&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s4&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R32&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;33&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s4&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R33&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;34&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s5&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R34&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;35&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s5&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R35&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;36&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s5&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R36&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;37&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s5&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R37&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;38&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s5&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R38&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;39&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s5&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&quot;s6&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R39&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;40&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R40&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;41&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R41&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;42&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R42&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;43&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R43&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;44&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R44&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;45&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R45&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;46&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R46&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;47&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R47&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;48&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R48&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;49&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R49&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;50&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R50&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;51&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R51&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;52&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R52&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;53&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R53&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;54&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R54&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;55&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;height: 20px&quot;&gt;&lt;th id=&quot;0R55&quot; style=&quot;height: 20px;&quot; class=&quot;row-headers-background&quot;&gt;&lt;div class=&quot;row-header-wrapper&quot; style=&quot;line-height: 20px&quot;&gt;56&lt;/div&gt;&lt;/th&gt;&lt;td class=&quot;s0&quot; dir=&quot;ltr&quot;&gt;Lands&lt;/td&gt;&lt;td class=&quot;s7&quot; dir=&quot;ltr&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;choosing-a-theme-artifacts&quot;&gt;Choosing a Theme: Artifacts&lt;/h2&gt;
+&lt;p&gt;For my first attempt at this kind of project, I figured I should make things easier on myself by choosing partners that have some mechanical overlap. Looking over the options, one word that appears on a partner of each color is “artifact,” so I let that word be my guiding theme.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;portrait&quot; src=&quot;https://cards.scryfall.io/large/front/7/2/728b802c-969b-4865-b7a0-871c585d097a.jpg?1721690827&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;white-ardenn-intrepid-archaeologist&quot;&gt;White: Ardenn, Intrepid Archaeologist&lt;/h2&gt;
+&lt;p&gt;While &lt;a href=&quot;https://scryfall.com/card/cmr/42/rebbec-architect-of-ascension&quot;&gt;Rebbec, Architect of Ascension&lt;/a&gt; is the white partner that actually has “artifact” in its rules text, I figured Ardenn’s more specific theme of equipment would help to focus the project.&lt;/p&gt;
+
+&lt;p&gt;I want to leverage Ardenn’s ability to put equipment on an &lt;em&gt;opponent’s&lt;/em&gt; creatures. One way to utilize this ability is to suit up an opposing creature, then goad it. Because white has few ways to goad a creature, we will look to the other halves (particularly red) to include some goad support to synergize with this game plan.&lt;/p&gt;
+
+&lt;p&gt;Another reason one might want to equip their opponents’ creatures is to laden them with detrimental equipment.
+(Images: Skullclamp, Cement Shoes, Captain’s Hook)
+If an opponent’s creature equipped with my Skullclamp dies, &lt;em&gt;I&lt;/em&gt; draw the two cards. Cement Shoes and similar equipment can lock down an opponent’s creature. Whenever we move Captain’s Hook off of an opponent’s creature, they have to sacrifice that creature. The additional effect of making a creature a pirate segues well into our next choice of partner.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;portrait&quot; src=&quot;https://cards.scryfall.io/large/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1608909299&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;blue-malcolm-keen-eyed-navigator&quot;&gt;Blue: Malcolm, Keen-Eyed Navigator&lt;/h2&gt;
+&lt;p&gt;Malcolm’s game plan is to create a bunch of treasures.&lt;/p&gt;
+
+&lt;p&gt;We are avoiding cards that statically count the number of artifacts on the field because in some combinations, we will want to feel free to sacrifice artifacts often.&lt;/p&gt;
+&lt;h2 id=&quot;black-keskit-the-flesh-sculptor&quot;&gt;Black: Keskit, the Flesh Sculptor&lt;/h2&gt;
+&lt;p&gt;(Image: Keskit)&lt;/p&gt;
+&lt;h2 id=&quot;red-toggo-goblin-weaponsmith&quot;&gt;Red: Toggo, Goblin Weaponsmith&lt;/h2&gt;
+&lt;p&gt;(image: Toggo)&lt;/p&gt;
+&lt;h2 id=&quot;green-ich-tekik-salvage-splicer&quot;&gt;Green: Ich-Tekik, Salvage Splicer&lt;/h2&gt;
+&lt;p&gt;(image: Ich-Tekik)
+Ich-Tekik wants to do two things: make golems and make tokens that can innately be sacrificed.&lt;/p&gt;
+
+&lt;h2 id=&quot;overlaps&quot;&gt;Overlaps&lt;/h2&gt;
+&lt;p&gt;Before discussing overlaps, I want note that I am avoiding having any “dead” cards, so a card included in any half needs to support that half’s theme. For example, I don’t want to include Lightning-Rig Crew in Toggo—despite the fact that it works very well with Malcolm, it doesn’t really make sense in any other combination.&lt;/p&gt;
+
+&lt;h3 id=&quot;wu-ardenn-and-malcolm&quot;&gt;WU: Ardenn and Malcolm&lt;/h3&gt;
+&lt;p&gt;Here, blue can give Ardenn access to evasive creatures to suit up, and Malcolm benefits from equipment that let pirates hit opponents multiple times&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Evasive creatures&lt;/li&gt;
+  &lt;li&gt;Equipment that grants double strike or deals direct damage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ub-malcolm-and-keskit&quot;&gt;UB: Malcolm and Keskit&lt;/h3&gt;
+&lt;p&gt;Black has access to a few pirates, though we’ll want to focus on those with some form of evasion. Malcolm’s treasure generation already synergizes very well with Keskit’s hunger for artifacts, so we’ll focus on some cards that synergize with the graveyard.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Black pirates with evasion&lt;/li&gt;
+  &lt;li&gt;Blue pirates with graveyard abilities&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;br-keskit-and-toggo&quot;&gt;BR: Keskit and Toggo&lt;/h3&gt;
+&lt;p&gt;With these two halves, we will have no problem sacrificing plenty of artifacts.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Deathtouch creatures to synergize with Toggo’s rocks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;rg-toggo-and-ich-tekik&quot;&gt;RG: Toggo and Ich-Tekik&lt;/h3&gt;
+&lt;p&gt;Green can help Toggo trigger landfall with ramp spells. Including ways to sacrifice artifacts in Toggo will help Ich-Tekik trigger.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ramp spells&lt;/li&gt;
+  &lt;li&gt;Ways to sacrifice artifacts&lt;/li&gt;
+  &lt;li&gt;Landfall triggers that make more artifact tokens&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gw-ich-tekik-and-ardenn&quot;&gt;GW: Ich-Tekik and Ardenn&lt;/h3&gt;
+&lt;p&gt;The overlap between these two partners is primarily in modifying creatures, whether that’s with counters or equipment.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cards that care about modifications&lt;/li&gt;
+  &lt;li&gt;White golems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;wb-ardenn-and-keskit&quot;&gt;WB: Ardenn and Keskit&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Equipment that comes with a second game object to be sacrificed to Keskit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bg-keskit-and-ich-tekik&quot;&gt;BG: Keskit and Ich-Tekik&lt;/h3&gt;
+&lt;p&gt;Here, Keskit’s sacrificing artifacts helps feed into growing Ich-Tekik’s golems&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Black golems&lt;/li&gt;
+  &lt;li&gt;Green cards that come along with artifact tokens&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gu-ich-tekik-and-malcolm&quot;&gt;GU: Ich-Tekik and Malcolm&lt;/h3&gt;
+&lt;p&gt;These two partners care about a particular creature type, so we’re looking for creatures that are both types or ways to transform our team’s type.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Changelings&lt;/li&gt;
+  &lt;li&gt;Effects that set our creatures’ types&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ur-malcolm-and-toggo&quot;&gt;UR: Malcolm and Toggo&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Red pirates&lt;/li&gt;
+  &lt;li&gt;Blue cards that care about artifact tokens&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;rw-toggo-and-ardenn&quot;&gt;RW: Toggo and Ardenn&lt;/h3&gt;
+&lt;p&gt;These two already have a great deal of overlap in that one creates equipment and the other cares about that equipment.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Creatures that like to carry equipment&lt;/li&gt;
+  &lt;li&gt;Cards in read to goad opponents’ creatures&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Equipment that ramps&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Looting effects to get you past irrelevant cards?&lt;/li&gt;
+  &lt;li&gt;Tutors to find pieces&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&quot;playtest&quot;&gt;
+	&lt;img id=&quot;ardenn&quot; src=&quot;https://cards.scryfall.io/large/front/7/2/728b802c-969b-4865-b7a0-871c585d097a.jpg?1721690827&quot; /&gt;
+	&lt;img id=&quot;malcolm&quot; src=&quot;https://cards.scryfall.io/large/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1608909299&quot; /&gt;
+	&lt;img id=&quot;keskit&quot; src=&quot;https://cards.scryfall.io/large/front/a/9/a9ecbf55-1f85-4877-a1ea-bf0d90dd9979.jpg?1682209080&quot; /&gt;
+	&lt;img id=&quot;toggo&quot; src=&quot;https://cards.scryfall.io/large/front/1/a/1a05b3e2-259e-4fce-92ee-c00660e22ae7.jpg?1665822993&quot; /&gt;
+	&lt;img id=&quot;ich&quot; src=&quot;https://cards.scryfall.io/large/front/0/4/0409a15a-7cf6-43e5-958c-d23da4304f29.jpg?1608910710&quot; /&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	var skeletontoggle = document.getElementById(&quot;skeletontoggle&quot;);
+	var skeletonsheet = document.getElementById(&quot;skeletonsheet&quot;);
+
+	skeletontoggle.onclick = function () {
+		skeletonsheet.classList.toggle(&quot;hidden&quot;);
+	}
+
+
+	var playtest = document.getElementById(&quot;playtest&quot;);
+
+	playtest.onclick = function(e) {
+		var target = e.target;
+		if (target.id != &quot;playtest&quot;){
+		target.classList.toggle(&quot;glow&quot;)
+	}
+	}
+&lt;/script&gt;
+
+&lt;style&gt;
+#playtest {
+	text-align:center;
+}
+
+#playtest img {
+	width: 16%;
+	transition: transform 330ms ease-in-out;
+}
+
+.glow {
+	-webkit-box-shadow:0px 0px 26px 2px rgba(255,196,45,0.9);
+-moz-box-shadow: 0px 0px 26px 2px rgba(45,255,196,0.9);
+box-shadow: 0px 0px 26px 2px rgba(255,196,45,0.9);
+}
+
+#playtest img:hover {
+	cursor:pointer;
+	transform: scale(1.2);
+}
+
+.portrait {
+	float:right;
+	height:12em;
+}
+
+#skeletonsheet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#skeletonsheet.hidden {
+	display: none;
+}
+
+&lt;/style&gt;</content><author><name></name></author><summary type="html">When it comes to building commander decks, I lean toward the esoteric. I think of each deck concept as a puzzle and each game as an opportunity to show off a hard-won solution. With this project, I wanted to deconstruct the very concept of a deck a little—what if a deck could actually be ten decks?</summary></entry><entry><title type="html">Jump Start Commander</title><link href="http://localhost:4000/2025/12/13/jumpstartcommander.html" rel="alternate" type="text/html" title="Jump Start Commander" /><published>2025-12-13T00:00:00-05:00</published><updated>2025-12-13T00:00:00-05:00</updated><id>http://localhost:4000/2025/12/13/jumpstartcommander</id><content type="html" xml:base="http://localhost:4000/2025/12/13/jumpstartcommander.html">&lt;p&gt;When it comes to building commander decks, I lean toward the esoteric. I think of each deck concept as a puzzle and each game as an opportunity to show off a hard-won solution. With this project, I wanted to deconstruct the very concept of a deck a little---what if a deck could actually be ten decks?&lt;/p&gt;
+&lt;p&gt;I played bit of the Jumpstart product, in which two packs from a list of different themes are shuffled together to form a ready-to-play 40 card deck. I slowly worked through a box of Jumpstart 2024 with one of my former students over the course of a few weeks, and I was impressed by the replayability. In particular, how playing the same pack twice paired with different themes created very different experiences.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Inspired by Jumpstart, this project consists of a set half-decks, each helmed by a partner commander. One must be able to take any two of these half decks, shuffle them together, and have a functional commander deck.&lt;/p&gt;
+&lt;h2 id=&quot;some-considerations-and-constraints&quot;&gt;Some Considerations and Constraints&lt;/h2&gt;
+&lt;p&gt;One consideration has to do with logistic: the decks must be separable back into its two halves.  Another concerns scope: the more half-decks in the set, the more complicated the interactions between them are. In light of these two considerations, I settled on five mono-color half-decks. My options for partners are then covered by the following Scryfall query.
+
+&lt;center&gt;&lt;a href=&quot;https://scryfall.com/search?q=o%3Apartner+-o%3A%22partner+with%22+-o%3A%22partner%E2%80%94%22+ci%3D1+legal%3Acommander&amp;unique=cards&amp;as=grid&amp;order=name&quot;&gt;&lt;code&gt;o:partner -o:&amp;quot;partner with&amp;quot; -o:&amp;quot;partner—&amp;quot; ci=1 legal:commander&lt;/code&gt;&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;h2 id=&quot;skeleton&quot;&gt;Skeleton&lt;/h2&gt;
+&lt;p&gt;When two halves are shuffled together, the result should feel like a cohesive whole. With this goal in mind, we want to place cards in each half that play well with other halves. Specifically, each half will have six cards chosen to synergize with each other half. For example, the white half will have six cards that work well with the blue half, six for the black half, and so on for the red and green halves. This leaves 25 cards: eight cards making up the &amp;quot;core&amp;quot; strategy of the half and 17 lands.&lt;/p&gt;
+&lt;h2 id=&quot;choosing-a-theme-artifacts&quot;&gt;Choosing a Theme: Artifacts&lt;/h2&gt;
+&lt;p&gt;For my first attempt at this kind of project, I figured I should make things easier on myself by choosing partners that have some mechanical overlap. Looking over the options, one word that appears on a partner of each color is &amp;quot;artifact,&amp;quot; so I let that word be my guiding theme.&lt;/p&gt;
+&lt;h2 id=&quot;white-ardenn-intrepid-archaeologist&quot;&gt;White: Ardenn, Intrepid Archaeologist&lt;/h2&gt;
+&lt;p&gt;(Image: Ardenn)
+While &lt;a href=&quot;https://scryfall.com/card/cmr/42/rebbec-architect-of-ascension&quot;&gt;Rebbec, Architect of Ascension&lt;/a&gt; is the white partner that actually has &amp;quot;artifact&amp;quot; in its rules text, I figured Ardenn&amp;#39;s more specific theme of equipment would help to focus the project.&lt;/p&gt;
+&lt;p&gt;I want to leverage Ardenn&amp;#39;s ability to put equipment on an &lt;em&gt;opponent&amp;#39;s&lt;/em&gt; creatures. One way to utilize this ability is to suit up an opposing creature, then goad it. Because white has few ways to goad a creature, we will look to the other halves (particularly red) to include some goad support to synergize with this game plan.&lt;/p&gt;
+&lt;p&gt;Another reason one might want to equip their opponents&amp;#39; creatures is to laden them with detrimental equipment.
+(Images: Skullclamp, Cement Shoes, Captain&amp;#39;s Hook)
+If an opponent&amp;#39;s creature equipped with my Skullclamp dies, &lt;em&gt;I&lt;/em&gt; draw the two cards. Cement Shoes and similar equipment can lock down an opponent&amp;#39;s creature. Whenever we move Captain&amp;#39;s Hook off of an opponent&amp;#39;s creature, they have to sacrifice that creature. The additional effect of making a creature a pirate segues well into our next choice of partner.&lt;/p&gt;
+&lt;h2 id=&quot;blue-malcolm-keen-eyed-navigator&quot;&gt;Blue: Malcolm, Keen-Eyed Navigator&lt;/h2&gt;
+&lt;p&gt;(image: Malcolm)
+Malcolm&amp;#39;s game plan is to create a bunch of treasures. &lt;/p&gt;
+&lt;p&gt;We are avoiding cards that statically count the number of artifacts on the field because in some combinations, we will want to feel free to sacrifice artifacts often.&lt;/p&gt;
+&lt;h2 id=&quot;black-keskit-the-flesh-sculptor&quot;&gt;Black: Keskit, the Flesh Sculptor&lt;/h2&gt;
+&lt;p&gt;(Image: Keskit)&lt;/p&gt;
+&lt;h2 id=&quot;red-toggo-goblin-weaponsmith&quot;&gt;Red: Toggo, Goblin Weaponsmith&lt;/h2&gt;
+&lt;p&gt;(image: Toggo)&lt;/p&gt;
+&lt;h2 id=&quot;green-ich-tekik-salvage-splicer&quot;&gt;Green: Ich-Tekik, Salvage Splicer&lt;/h2&gt;
+&lt;p&gt;(image: Ich-Tekik)
+Ich-Tekik wants to do two things: make golems and make tokens that can innately be sacrificed.&lt;/p&gt;
+&lt;h2 id=&quot;overlaps&quot;&gt;Overlaps&lt;/h2&gt;
+&lt;p&gt;Before discussing overlaps, I want note that I am avoiding having any &amp;quot;dead&amp;quot; cards, so a card included in any half needs to support that half&amp;#39;s theme. For example, I don&amp;#39;t want to include Lightning-Rig Crew in Toggo---despite the fact that it works very well with Malcolm, it doesn&amp;#39;t really make sense in any other combination.&lt;/p&gt;
+&lt;h3 id=&quot;wu-ardenn-and-malcolm&quot;&gt;WU: Ardenn and Malcolm&lt;/h3&gt;
+&lt;p&gt;Here, blue can give Ardenn access to evasive creatures to suit up, and Malcolm benefits from equipment that let pirates hit opponents multiple times&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Evasive creatures&lt;/li&gt;
+&lt;li&gt;Equipment that grants double strike or deals direct damage&lt;h3 id=&quot;ub-malcolm-and-keskit&quot;&gt;UB: Malcolm and Keskit&lt;/h3&gt;
+Black has access to a few pirates, though we&amp;#39;ll want to focus on those with some form of evasion. Malcolm&amp;#39;s treasure generation already synergizes very well with Keskit&amp;#39;s hunger for artifacts, so we&amp;#39;ll focus on some cards that synergize with the graveyard.&lt;/li&gt;
+&lt;li&gt;Black pirates with evasion&lt;/li&gt;
+&lt;li&gt;Blue pirates with graveyard abilities&lt;h3 id=&quot;br-keskit-and-toggo&quot;&gt;BR: Keskit and Toggo&lt;/h3&gt;
+With these two halves, we will have no problem sacrificing plenty of artifacts. &lt;/li&gt;
+&lt;li&gt;Deathtouch creatures to synergize with Toggo&amp;#39;s rocks&lt;h3 id=&quot;rg-toggo-and-ich-tekik&quot;&gt;RG: Toggo and Ich-Tekik&lt;/h3&gt;
+Green can help Toggo trigger landfall with ramp spells. Including ways to sacrifice artifacts in Toggo will help Ich-Tekik trigger.&lt;/li&gt;
+&lt;li&gt;Ramp spells&lt;/li&gt;
+&lt;li&gt;Ways to sacrifice artifacts&lt;/li&gt;
+&lt;li&gt;Landfall triggers that make more artifact tokens&lt;h3 id=&quot;gw-ich-tekik-and-ardenn&quot;&gt;GW: Ich-Tekik and Ardenn&lt;/h3&gt;
+The overlap between these two partners is primarily in modifying creatures, whether that&amp;#39;s with counters or equipment.&lt;/li&gt;
+&lt;li&gt;Cards that care about modifications&lt;/li&gt;
+&lt;li&gt;White golems&lt;h3 id=&quot;wb-ardenn-and-keskit&quot;&gt;WB: Ardenn and Keskit&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;Equipment that comes with a second game object to be sacrificed to Keskit&lt;h3 id=&quot;bg-keskit-and-ich-tekik&quot;&gt;BG: Keskit and Ich-Tekik&lt;/h3&gt;
+Here, Keskit&amp;#39;s sacrificing artifacts helps feed into growing Ich-Tekik&amp;#39;s golems&lt;/li&gt;
+&lt;li&gt;Black golems&lt;/li&gt;
+&lt;li&gt;Green cards that come along with artifact tokens&lt;h3 id=&quot;gu-ich-tekik-and-malcolm&quot;&gt;GU: Ich-Tekik and Malcolm&lt;/h3&gt;
+These two partners care about a particular creature type, so we&amp;#39;re looking for creatures that are both types or ways to transform our team&amp;#39;s type.&lt;/li&gt;
+&lt;li&gt;Changelings&lt;/li&gt;
+&lt;li&gt;Effects that set our creatures&amp;#39; types&lt;h3 id=&quot;ur-malcolm-and-toggo&quot;&gt;UR: Malcolm and Toggo&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;Red pirates&lt;/li&gt;
+&lt;li&gt;Blue cards that care about artifact tokens&lt;h3 id=&quot;rw-toggo-and-ardenn&quot;&gt;RW: Toggo and Ardenn&lt;/h3&gt;
+These two already have a great deal of overlap in that one creates equipment and the other cares about that equipment.&lt;/li&gt;
+&lt;li&gt;Creatures that like to carry equipment&lt;/li&gt;
+&lt;li&gt;Cards in read to goad opponents&amp;#39; creatures&lt;/li&gt;
+&lt;li&gt;Equipment that ramps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Looting effects to get you past irrelevant cards?&lt;/li&gt;
+&lt;li&gt;Tutors to find pieces&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&quot;playtest&quot;&gt;
+	&lt;img id=&quot;ardenn&quot; src=&quot;https://cards.scryfall.io/large/front/7/2/728b802c-969b-4865-b7a0-871c585d097a.jpg?1721690827&quot; /&gt;
+	&lt;img id=&quot;malcolm&quot; src=&quot;https://cards.scryfall.io/large/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1608909299&quot; /&gt;
+	&lt;img id=&quot;keskit&quot; src=&quot;https://cards.scryfall.io/large/front/a/9/a9ecbf55-1f85-4877-a1ea-bf0d90dd9979.jpg?1682209080&quot; /&gt;
+	&lt;img id=&quot;toggo&quot; src=&quot;https://cards.scryfall.io/large/front/1/a/1a05b3e2-259e-4fce-92ee-c00660e22ae7.jpg?1665822993&quot; /&gt;
+	&lt;img id=&quot;ich&quot; src=&quot;https://cards.scryfall.io/large/front/0/4/0409a15a-7cf6-43e5-958c-d23da4304f29.jpg?1608910710&quot; /&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	var playtest = document.getElementById(&quot;playtest&quot;);
+
+	playtest.onclick = function(e) {
+		var target = e.target;
+		if (target.id != &quot;playtest&quot;){
+		target.classList.toggle(&quot;glow&quot;)
+	}
+	}
+&lt;/script&gt;
+
+&lt;style&gt;
+#playtest {
+	text-align:center;
+}
+
+#playtest img {
+	width: 16%;
+	transition: transform 330ms ease-in-out;
+}
+
+.glow {
+	-webkit-box-shadow:0px 0px 26px 2px rgba(255,196,45,0.9);
+-moz-box-shadow: 0px 0px 26px 2px rgba(45,255,196,0.9);
+box-shadow: 0px 0px 26px 2px rgba(255,196,45,0.9);
+}
+
+#playtest img:hover {
+	cursor:pointer;
+	transform: scale(1.2);
+}
+&lt;/style&gt;</content><author><name></name></author><summary type="html">When it comes to building commander decks, I lean toward the esoteric. I think of each deck concept as a puzzle and each game as an opportunity to show off a hard-won solution. With this project, I wanted to deconstruct the very concept of a deck a little---what if a deck could actually be ten decks? I played bit of the Jumpstart product, in which two packs from a list of different themes are shuffled together to form a ready-to-play 40 card deck. I slowly worked through a box of Jumpstart 2024 with one of my former students over the course of a few weeks, and I was impressed by the replayability. In particular, how playing the same pack twice paired with different themes created very different experiences. Goal: Inspired by Jumpstart, this project consists of a set half-decks, each helmed by a partner commander. One must be able to take any two of these half decks, shuffle them together, and have a functional commander deck. Some Considerations and Constraints One consideration has to do with logistic: the decks must be separable back into its two halves. Another concerns scope: the more half-decks in the set, the more complicated the interactions between them are. In light of these two considerations, I settled on five mono-color half-decks. My options for partners are then covered by the following Scryfall query.</summary></entry></feed>

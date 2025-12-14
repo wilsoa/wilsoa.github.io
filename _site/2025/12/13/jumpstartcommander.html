@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <title> Jump Start Commander &mdash; Alexander N. Wilson</title>
+    <link rel="stylesheet" href="/assets/style.css?3" />
+</head>
+<body>
+    <header>       
+        <div id="navigation">
+    <a href="http://localhost:4000/research.html">Research</a>
+    <a href="http://localhost:4000/teaching.html">Teaching</a>
+    <a href="http://localhost:4000/outreach.html">Service</a>
+    <a href="http://localhost:4000/assets/documents/Curriculum_Vitae.pdf">CV</a>
+    <a href="http://localhost:4000/gallery.html">Gallery</a>
+</div>
+        <h1><a href="http://localhost:4000/">Alexander N. Wilson</a></h1>
+    </header>
+
+    
+    
+    
+    <h2>Jump Start Commander</h2>
+    <div id="content" class="full">
+        <p>When it comes to building commander decks, I lean toward the esoteric. I think of each deck concept as a puzzle and each game as an opportunity to show off a hard-won solution. With this project, I wanted to deconstruct the very concept of a deck a little---what if a deck could actually be ten decks?</p>
+<p>I played bit of the Jumpstart product, in which two packs from a list of different themes are shuffled together to form a ready-to-play 40 card deck. I slowly worked through a box of Jumpstart 2024 with one of my former students over the course of a few weeks, and I was impressed by the replayability. In particular, how playing the same pack twice paired with different themes created very different experiences.</p>
+<p><strong>Goal:</strong> Inspired by Jumpstart, this project consists of a set half-decks, each helmed by a partner commander. One must be able to take any two of these half decks, shuffle them together, and have a functional commander deck.</p>
+<h2 id="some-considerations-and-constraints">Some Considerations and Constraints</h2>
+<p>One consideration has to do with logistic: the decks must be separable back into its two halves.  Another concerns scope: the more half-decks in the set, the more complicated the interactions between them are. In light of these two considerations, I settled on five mono-color half-decks. My options for partners are then covered by the following Scryfall query.
+
+<center><a href="https://scryfall.com/search?q=o%3Apartner+-o%3A%22partner+with%22+-o%3A%22partner%E2%80%94%22+ci%3D1+legal%3Acommander&unique=cards&as=grid&order=name"><code>o:partner -o:&quot;partner with&quot; -o:&quot;partner—&quot; ci=1 legal:commander</code></a></center></p>
+<h2 id="skeleton">Skeleton</h2>
+<p>When two halves are shuffled together, the result should feel like a cohesive whole. With this goal in mind, we want to place cards in each half that play well with other halves. Specifically, each half will have six cards chosen to synergize with each other half. For example, the white half will have six cards that work well with the blue half, six for the black half, and so on for the red and green halves. This leaves 25 cards: eight cards making up the &quot;core&quot; strategy of the half and 17 lands.</p>
+<h2 id="choosing-a-theme-artifacts">Choosing a Theme: Artifacts</h2>
+<p>For my first attempt at this kind of project, I figured I should make things easier on myself by choosing partners that have some mechanical overlap. Looking over the options, one word that appears on a partner of each color is &quot;artifact,&quot; so I let that word be my guiding theme.</p>
+<h2 id="white-ardenn-intrepid-archaeologist">White: Ardenn, Intrepid Archaeologist</h2>
+<p>(Image: Ardenn)
+While <a href="https://scryfall.com/card/cmr/42/rebbec-architect-of-ascension">Rebbec, Architect of Ascension</a> is the white partner that actually has &quot;artifact&quot; in its rules text, I figured Ardenn&#39;s more specific theme of equipment would help to focus the project.</p>
+<p>I want to leverage Ardenn&#39;s ability to put equipment on an <em>opponent&#39;s</em> creatures. One way to utilize this ability is to suit up an opposing creature, then goad it. Because white has few ways to goad a creature, we will look to the other halves (particularly red) to include some goad support to synergize with this game plan.</p>
+<p>Another reason one might want to equip their opponents&#39; creatures is to laden them with detrimental equipment.
+(Images: Skullclamp, Cement Shoes, Captain&#39;s Hook)
+If an opponent&#39;s creature equipped with my Skullclamp dies, <em>I</em> draw the two cards. Cement Shoes and similar equipment can lock down an opponent&#39;s creature. Whenever we move Captain&#39;s Hook off of an opponent&#39;s creature, they have to sacrifice that creature. The additional effect of making a creature a pirate segues well into our next choice of partner.</p>
+<h2 id="blue-malcolm-keen-eyed-navigator">Blue: Malcolm, Keen-Eyed Navigator</h2>
+<p>(image: Malcolm)
+Malcolm&#39;s game plan is to create a bunch of treasures. </p>
+<p>We are avoiding cards that statically count the number of artifacts on the field because in some combinations, we will want to feel free to sacrifice artifacts often.</p>
+<h2 id="black-keskit-the-flesh-sculptor">Black: Keskit, the Flesh Sculptor</h2>
+<p>(Image: Keskit)</p>
+<h2 id="red-toggo-goblin-weaponsmith">Red: Toggo, Goblin Weaponsmith</h2>
+<p>(image: Toggo)</p>
+<h2 id="green-ich-tekik-salvage-splicer">Green: Ich-Tekik, Salvage Splicer</h2>
+<p>(image: Ich-Tekik)
+Ich-Tekik wants to do two things: make golems and make tokens that can innately be sacrificed.</p>
+<h2 id="overlaps">Overlaps</h2>
+<p>Before discussing overlaps, I want note that I am avoiding having any &quot;dead&quot; cards, so a card included in any half needs to support that half&#39;s theme. For example, I don&#39;t want to include Lightning-Rig Crew in Toggo---despite the fact that it works very well with Malcolm, it doesn&#39;t really make sense in any other combination.</p>
+<h3 id="wu-ardenn-and-malcolm">WU: Ardenn and Malcolm</h3>
+<p>Here, blue can give Ardenn access to evasive creatures to suit up, and Malcolm benefits from equipment that let pirates hit opponents multiple times</p>
+<ul>
+<li>Evasive creatures</li>
+<li>Equipment that grants double strike or deals direct damage<h3 id="ub-malcolm-and-keskit">UB: Malcolm and Keskit</h3>
+Black has access to a few pirates, though we&#39;ll want to focus on those with some form of evasion. Malcolm&#39;s treasure generation already synergizes very well with Keskit&#39;s hunger for artifacts, so we&#39;ll focus on some cards that synergize with the graveyard.</li>
+<li>Black pirates with evasion</li>
+<li>Blue pirates with graveyard abilities<h3 id="br-keskit-and-toggo">BR: Keskit and Toggo</h3>
+With these two halves, we will have no problem sacrificing plenty of artifacts. </li>
+<li>Deathtouch creatures to synergize with Toggo&#39;s rocks<h3 id="rg-toggo-and-ich-tekik">RG: Toggo and Ich-Tekik</h3>
+Green can help Toggo trigger landfall with ramp spells. Including ways to sacrifice artifacts in Toggo will help Ich-Tekik trigger.</li>
+<li>Ramp spells</li>
+<li>Ways to sacrifice artifacts</li>
+<li>Landfall triggers that make more artifact tokens<h3 id="gw-ich-tekik-and-ardenn">GW: Ich-Tekik and Ardenn</h3>
+The overlap between these two partners is primarily in modifying creatures, whether that&#39;s with counters or equipment.</li>
+<li>Cards that care about modifications</li>
+<li>White golems<h3 id="wb-ardenn-and-keskit">WB: Ardenn and Keskit</h3>
+</li>
+<li>Equipment that comes with a second game object to be sacrificed to Keskit<h3 id="bg-keskit-and-ich-tekik">BG: Keskit and Ich-Tekik</h3>
+Here, Keskit&#39;s sacrificing artifacts helps feed into growing Ich-Tekik&#39;s golems</li>
+<li>Black golems</li>
+<li>Green cards that come along with artifact tokens<h3 id="gu-ich-tekik-and-malcolm">GU: Ich-Tekik and Malcolm</h3>
+These two partners care about a particular creature type, so we&#39;re looking for creatures that are both types or ways to transform our team&#39;s type.</li>
+<li>Changelings</li>
+<li>Effects that set our creatures&#39; types<h3 id="ur-malcolm-and-toggo">UR: Malcolm and Toggo</h3>
+</li>
+<li>Red pirates</li>
+<li>Blue cards that care about artifact tokens<h3 id="rw-toggo-and-ardenn">RW: Toggo and Ardenn</h3>
+These two already have a great deal of overlap in that one creates equipment and the other cares about that equipment.</li>
+<li>Creatures that like to carry equipment</li>
+<li>Cards in read to goad opponents&#39; creatures</li>
+<li>Equipment that ramps</li>
+</ul>
+<ul>
+<li>Looting effects to get you past irrelevant cards?</li>
+<li>Tutors to find pieces</li>
+</ul>
+
+<div id="playtest">
+	<img id="ardenn" src="https://cards.scryfall.io/large/front/7/2/728b802c-969b-4865-b7a0-871c585d097a.jpg?1721690827" />
+	<img id="malcolm" src="https://cards.scryfall.io/large/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1608909299" />
+	<img id="keskit" src="https://cards.scryfall.io/large/front/a/9/a9ecbf55-1f85-4877-a1ea-bf0d90dd9979.jpg?1682209080" />
+	<img id="toggo" src="https://cards.scryfall.io/large/front/1/a/1a05b3e2-259e-4fce-92ee-c00660e22ae7.jpg?1665822993" />
+	<img id="ich" src="https://cards.scryfall.io/large/front/0/4/0409a15a-7cf6-43e5-958c-d23da4304f29.jpg?1608910710" />
+</div>
+
+<script>
+	var playtest = document.getElementById("playtest");
+
+	playtest.onclick = function(e) {
+		var target = e.target;
+		if (target.id != "playtest"){
+		target.classList.toggle("glow")
+	}
+	}
+</script>
+
+<style>
+#playtest {
+	text-align:center;
+}
+
+#playtest img {
+	width: 16%;
+	transition: transform 330ms ease-in-out;
+}
+
+.glow {
+	-webkit-box-shadow:0px 0px 26px 2px rgba(255,196,45,0.9);
+-moz-box-shadow: 0px 0px 26px 2px rgba(45,255,196,0.9);
+box-shadow: 0px 0px 26px 2px rgba(255,196,45,0.9);
+}
+
+#playtest img:hover {
+	cursor:pointer;
+	transform: scale(1.2);
+}
+</style>
+    </div>
+    <div id="info">This site was last updated on December 14, 2025. It was created using <a href="https://jekyllrb.com/">Jekyll</a> with interactive components running on <a href="https://p5js.org/">p5.js</a>.</div>
+</body>
+</html>
+
+
