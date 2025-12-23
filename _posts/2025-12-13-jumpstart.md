@@ -8,6 +8,9 @@ When it comes to building commander decks, I lean toward the esoteric. I think o
 I played bit of the Jumpstart product, in which two packs from a list of different themes are shuffled together to form a ready-to-play 40 card deck. I slowly worked through a box of Jumpstart 2024 with one of my former students over the course of a few weeks, and I was impressed by the replayability. In particular, how playing the same pack twice paired with different themes created very different experiences.
 
 **Goal:** Inspired by Jumpstart, this project consists of a set half-decks, each helmed by a partner commander. One must be able to take any two of these half decks, shuffle them together, and have a functional commander deck.
+
+To skip to decklists and playtesting, click [here](#try-it-out).
+
 ## Some Considerations and Constraints
 One consideration has to do with logistic: the decks must be separable back into its two halves.  Another concerns scope: the more half-decks in the set, the more complicated the interactions between them are. In light of these two considerations, I settled on five mono-color half-decks. My options for partners are then covered by the following Scryfall query.
 [`o:partner -o:"partner with" -o:"partner—" ci=1 legal:commander`](https://scryfall.com/search?q=o%3Apartner+-o%3A%22partner+with%22+-o%3A%22partner%E2%80%94%22+ci%3D1+legal%3Acommander)
@@ -118,34 +121,22 @@ These two already have a great deal of overlap in that one creates equipment and
 
 ## Try It Out
 
-Choose two partners to see their decklist. 
+Choose two partners below to see their decklist. 
+<ul>
+	<li id="decklist_link">Decklist: </li>
+	<li id="playtest_link">Playtest: </li>
+</ul>
 
 <div id="playtest">
 	<img id="ardenn" src="{{site.url}}/assets/images/blog/cmr-10-ardenn-intrepid-archaeologist.png" />
-	<img id="malcolm" src="https://cards.scryfall.io/large/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1608909299" />
-	<img id="keskit" src="https://cards.scryfall.io/large/front/a/9/a9ecbf55-1f85-4877-a1ea-bf0d90dd9979.jpg?1682209080" />
-	<img id="toggo" src="https://cards.scryfall.io/large/front/1/a/1a05b3e2-259e-4fce-92ee-c00660e22ae7.jpg?1665822993" />
-	<img id="ich" src="https://cards.scryfall.io/large/front/0/4/0409a15a-7cf6-43e5-958c-d23da4304f29.jpg?1608910710" />
+	<img id="malcolm" src="{{site.url}}/assets/images/blog/cmr-79-malcolm-keen-eyed-navigator.png" />
+	<img id="keskit" src="{{site.url}}/assets/images/blog/cmr-131-keskit-the-flesh-sculptor.png" />
+	<img id="toggo" src="{{site.url}}/assets/images/blog/cmr-204-toggo-goblin-weaponsmith.png" />
+	<img id="ich" src="{{site.url}}/assets/images/blog/cmr-233-ich-tekik-salvage-splicer.png" />
 </div>
 
-<script>
-	var skeletontoggle = document.getElementById("skeletontoggle");
-	var skeletonsheet = document.getElementById("skeletonsheet");
 
-	skeletontoggle.onclick = function () {
-		skeletonsheet.classList.toggle("hidden");
-	}
-
-
-	var playtest = document.getElementById("playtest");
-
-	playtest.onclick = function(e) {
-		var target = e.target;
-		if (target.id != "playtest"){
-		target.classList.toggle("glow")
-	}
-	}
-</script>
+<script src="{{site.url}}/assets/scripts/blog/jumpstart.js"></script>
 
 <style>
 #playtest {

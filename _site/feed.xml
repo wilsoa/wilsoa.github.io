@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-18T18:15:56-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Alexander N. Wilson</title><subtitle>I am a visiting assistant professor at Oberlin College. I received my PhD from Dartmouth College advised by &lt;a href=&quot;https://math.dartmouth.edu/~orellana/&quot;&gt;Rosa Orellana&lt;/a&gt;. My research is in combinatorial representation theory.</subtitle><entry><title type="html">Jump Start Commander</title><link href="http://localhost:4000/2025/12/13/jumpstart.html" rel="alternate" type="text/html" title="Jump Start Commander" /><published>2025-12-13T00:00:00-05:00</published><updated>2025-12-13T00:00:00-05:00</updated><id>http://localhost:4000/2025/12/13/jumpstart</id><content type="html" xml:base="http://localhost:4000/2025/12/13/jumpstart.html">&lt;p&gt;When it comes to building commander decks, I lean toward the esoteric. I think of each deck concept as a puzzle and each game as an opportunity to show off a hard-won solution. With this project, I wanted to deconstruct the very concept of a deck a little—what if a deck could actually be ten decks?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-23T09:43:30-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Alexander N. Wilson</title><subtitle>I am a visiting assistant professor at Oberlin College. I received my PhD from Dartmouth College advised by &lt;a href=&quot;https://math.dartmouth.edu/~orellana/&quot;&gt;Rosa Orellana&lt;/a&gt;. My research is in combinatorial representation theory.</subtitle><entry><title type="html">Jump Start Commander</title><link href="http://localhost:4000/2025/12/13/jumpstart.html" rel="alternate" type="text/html" title="Jump Start Commander" /><published>2025-12-13T00:00:00-05:00</published><updated>2025-12-13T00:00:00-05:00</updated><id>http://localhost:4000/2025/12/13/jumpstart</id><content type="html" xml:base="http://localhost:4000/2025/12/13/jumpstart.html">&lt;p&gt;When it comes to building commander decks, I lean toward the esoteric. I think of each deck concept as a puzzle and each game as an opportunity to show off a hard-won solution. With this project, I wanted to deconstruct the very concept of a deck a little—what if a deck could actually be ten decks?&lt;/p&gt;
 
 &lt;p&gt;I played bit of the Jumpstart product, in which two packs from a list of different themes are shuffled together to form a ready-to-play 40 card deck. I slowly worked through a box of Jumpstart 2024 with one of my former students over the course of a few weeks, and I was impressed by the replayability. In particular, how playing the same pack twice paired with different themes created very different experiences.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Inspired by Jumpstart, this project consists of a set half-decks, each helmed by a partner commander. One must be able to take any two of these half decks, shuffle them together, and have a functional commander deck.&lt;/p&gt;
+
+&lt;p&gt;To skip to decklists and playtesting, click &lt;a href=&quot;#try-it-out&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h2 id=&quot;some-considerations-and-constraints&quot;&gt;Some Considerations and Constraints&lt;/h2&gt;
 &lt;p&gt;One consideration has to do with logistic: the decks must be separable back into its two halves.  Another concerns scope: the more half-decks in the set, the more complicated the interactions between them are. In light of these two considerations, I settled on five mono-color half-decks. My options for partners are then covered by the following Scryfall query.
 &lt;a href=&quot;https://scryfall.com/search?q=o%3Apartner+-o%3A%22partner+with%22+-o%3A%22partner%E2%80%94%22+ci%3D1+legal%3Acommander&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o:partner -o:&quot;partner with&quot; -o:&quot;partner—&quot; ci=1 legal:commander&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
@@ -132,34 +135,21 @@ Ich-Tekik wants to do two things: make golems and make tokens that can innately 
 
 &lt;h2 id=&quot;try-it-out&quot;&gt;Try It Out&lt;/h2&gt;
 
-&lt;p&gt;Choose two partners to see their decklist.&lt;/p&gt;
+&lt;p&gt;Choose two partners below to see their decklist.&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li id=&quot;decklist_link&quot;&gt;Decklist: &lt;/li&gt;
+	&lt;li id=&quot;playtest_link&quot;&gt;Playtest: &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div id=&quot;playtest&quot;&gt;
 	&lt;img id=&quot;ardenn&quot; src=&quot;http://localhost:4000/assets/images/blog/cmr-10-ardenn-intrepid-archaeologist.png&quot; /&gt;
-	&lt;img id=&quot;malcolm&quot; src=&quot;https://cards.scryfall.io/large/front/b/b/bbc3bbda-a4bc-4302-a3fc-b1c89f0f5461.jpg?1608909299&quot; /&gt;
-	&lt;img id=&quot;keskit&quot; src=&quot;https://cards.scryfall.io/large/front/a/9/a9ecbf55-1f85-4877-a1ea-bf0d90dd9979.jpg?1682209080&quot; /&gt;
-	&lt;img id=&quot;toggo&quot; src=&quot;https://cards.scryfall.io/large/front/1/a/1a05b3e2-259e-4fce-92ee-c00660e22ae7.jpg?1665822993&quot; /&gt;
-	&lt;img id=&quot;ich&quot; src=&quot;https://cards.scryfall.io/large/front/0/4/0409a15a-7cf6-43e5-958c-d23da4304f29.jpg?1608910710&quot; /&gt;
+	&lt;img id=&quot;malcolm&quot; src=&quot;http://localhost:4000/assets/images/blog/cmr-79-malcolm-keen-eyed-navigator.png&quot; /&gt;
+	&lt;img id=&quot;keskit&quot; src=&quot;http://localhost:4000/assets/images/blog/cmr-131-keskit-the-flesh-sculptor.png&quot; /&gt;
+	&lt;img id=&quot;toggo&quot; src=&quot;http://localhost:4000/assets/images/blog/cmr-204-toggo-goblin-weaponsmith.png&quot; /&gt;
+	&lt;img id=&quot;ich&quot; src=&quot;http://localhost:4000/assets/images/blog/cmr-233-ich-tekik-salvage-splicer.png&quot; /&gt;
 &lt;/div&gt;
 
-&lt;script&gt;
-	var skeletontoggle = document.getElementById(&quot;skeletontoggle&quot;);
-	var skeletonsheet = document.getElementById(&quot;skeletonsheet&quot;);
-
-	skeletontoggle.onclick = function () {
-		skeletonsheet.classList.toggle(&quot;hidden&quot;);
-	}
-
-
-	var playtest = document.getElementById(&quot;playtest&quot;);
-
-	playtest.onclick = function(e) {
-		var target = e.target;
-		if (target.id != &quot;playtest&quot;){
-		target.classList.toggle(&quot;glow&quot;)
-	}
-	}
-&lt;/script&gt;
+&lt;script src=&quot;http://localhost:4000/assets/scripts/blog/jumpstart.js&quot;&gt;&lt;/script&gt;
 
 &lt;style&gt;
 #playtest {
