@@ -38,8 +38,8 @@
     - bruce
   citation: <a href="https://www.mat.univie.ac.at/~slc/wpapers/FPSAC2025/141.pdf"><i>Proceedings of FPSAC 2025, Sém. Lothar. Combin.</i> <b>93B</b> (2025), 12pp</a>
   tags: Crystals
-- title: The support of Kostant's weight multiplicity formula is an order ideal in the weak Bruhat order (with P. X. Anderson, E. Banaian, M. J. Ferreri, O. C. Goff, K. P. Hadaway, P. E. Harris, K. J. Harry, N. Mayers, S. Wang)
-  citation: <i>preprint</i>
+- title: The support of Kostant's weight multiplicity formula is an order ideal in the Bruhat order (with P. X. Anderson, E. Banaian, M. J. Ferreri, O. C. Goff, K. P. Hadaway, P. E. Harris, K. J. Harry, N. Mayers, S. Wang)
+  citation: <i><a href="https://intlpress.com/journals/journalList?p=1&id=1804415585555116033">Journal of Combinatorics</a></i>, to appear
   arxiv: "2412.16820"
   slides:
     location: UW Madison Combinatorics Seminar Jan 27, 2025
@@ -53,7 +53,7 @@
   pdf: "Costello_Divisibility.pdf"
   collaborators:
     - sam
-  citation: <i>College Mathematics Journal, to appear</i>
+  citation: <i>College Mathematics Journal</i>, to appear
   tags: Work with Undergrads
 - title: Kronecker Coefficients, Crystals, and Bitableaux
   arxiv: "2507.14026"
