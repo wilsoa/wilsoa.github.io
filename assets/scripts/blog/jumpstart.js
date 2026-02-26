@@ -1,11 +1,3 @@
-var skeletontoggle = document.getElementById("skeletontoggle");
-var skeletonsheet = document.getElementById("skeletonsheet");
-
-skeletontoggle.onclick = function () {
-	skeletonsheet.classList.toggle("hidden");
-}
-
-
 const playtest = document.getElementById("playtest");
 const playtest_link = document.getElementById("playtest_link");
 const decklist_link = document.getElementById("decklist_link");
