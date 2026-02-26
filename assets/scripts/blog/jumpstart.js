@@ -6,7 +6,18 @@ const malcolm = document.getElementById("malcolm");
 const keskit = document.getElementById("keskit");
 const toggo = document.getElementById("toggo");
 const ich = document.getElementById("ich");
+const random = document.getElementById("random");
 var cards_selected = 0;
+
+function remove_selection () {
+	cards_selected = 0;
+	ardenn.classList.remove("glow");
+	malcolm.classList.remove("glow");
+	keskit.classList.remove("glow");
+	toggo.classList.remove("glow");
+	ich.classList.remove("glow");
+	create_playtest_link ();
+}
 
 playtest.onclick = function(e) {
 	var target = e.target;
@@ -18,13 +29,7 @@ playtest.onclick = function(e) {
 		else
 		{
 			if (cards_selected >= 2) {
-				cards_selected = 0;
-				ardenn.classList.remove("glow");
-				malcolm.classList.remove("glow");
-				keskit.classList.remove("glow");
-				toggo.classList.remove("glow");
-				ich.classList.remove("glow");
-				create_playtest_link ();
+				remove_selection();
 			}
 			target.classList.add("glow");
 			cards_selected++;
@@ -88,4 +93,16 @@ function create_playtest_link () {
 		decklist_link.innerHTML = "<a href='https://moxfield.com/decks/" + links[identifier] + "' target='_blank'>Decklist: " + names[identifier] + "</a>";
 		playtest_link.innerHTML = "<a href='https://moxfield.com/decks/" + links[identifier] + "/goldfish' target='_blank'>Playtest: " + names[identifier] + "</a>"
 	}	
+}
+
+random.onclick = function () {
+	const index1 = Math.floor(Math.random() * 5);
+	const index2 = (index1 + 1 + Math.floor(Math.random() * 4))%5;
+	const list = [ardenn, malcolm, keskit, toggo, ich];
+
+	console.log(index1, index2);
+
+	remove_selection();
+	list[index1].click();
+	list[index2].click();
 }

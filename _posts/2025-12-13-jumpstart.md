@@ -161,7 +161,7 @@ These two already have a great deal of overlap in that one creates equipment and
 
 ## Try It Out
 
-Choose two partners below to see their decklist. 
+Choose two partners below to see their decklist, or <button id="random">get a random pair</button>.
 <ul>
 	<li id="decklist_link">Decklist: </li>
 	<li id="playtest_link">Playtest: </li>
