@@ -4,8 +4,15 @@ title: Blog
 ---
 <ul id="posts">
   {% for post in site.posts %}
-    <li class="post">
-      <div class="post-header"><a href="{{ post.url }}">{{ post.title }}</a>
+    <li class="post {{ post.category }}">
+      <div class="post-header"><a href="{{ post.url }}">{{ post.title }}</a><span class="category">
+        {% if post.category == "review" %}
+          Review
+        {% endif %}
+        {% if post.category == "magic" %}
+          Magic: the Gathering
+        {% endif %}
+      </span>
       <span class="date">{{post.date | date: "%b %d, %Y" }}</span></div>
       <div class="excerpt">{{ post.excerpt }}</div>
     </li>
@@ -30,7 +37,29 @@ title: Blog
      padding-left: 0px;
   }
 
-  .post-header {
-    border-bottom: 4px solid #BADA55;
+  .magic .post-header {
+    border-bottom: 4px solid #0085FF;
+  }
+
+  .magic .category {
+    background: #0085FF;
+  }
+
+  .review .post-header {
+    border-bottom: 4px solid #FF9000;
+  }
+
+  .review .category {
+    background: #FF9000;
+  }
+
+  .category {
+    display: inline-block;
+    padding: 2px;
+    border-radius: 10px 10px 0px 0px; 
+    margin-left: 10px;
+    color: white;
+    text-shadow: none;
+    font-weight: bold;
   }
 </style>
