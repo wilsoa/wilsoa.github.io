@@ -162,3 +162,8 @@ body.dark-theme a {
 body.dark-theme h3 {
   color: #bbb;
 }
+
+
+#pagetitle {
+  margin-bottom: 0px;
+}
