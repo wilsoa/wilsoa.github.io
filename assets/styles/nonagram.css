@@ -1,0 +1,37 @@
+.nonagram .button {
+	border: 1px solid #CCCCCC;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.nonagram .button:hover {
+	background: #DEDEDE;
+}
+
+.nonagram .col-clue {
+	text-align: center;
+	vertical-align: bottom;
+}
+.nonagram .col-clue span {
+	display: block;
+}
+
+.nonagram .row-clue {
+	text-align: right;
+}
+.nonagram .row-clue span {
+	margin-right: 3px;
+}
+
+.nonagram .button.active {
+	background: #000000;
+}
+
+.nonagram .button.active:hover {
+	background: #00000066;
+}
+
+.nonagram .button.blocked {
+	background: #CDCDCD;
+}
