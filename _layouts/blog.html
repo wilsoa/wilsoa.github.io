@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <title>{% if page.title!="" %} {{ page.title }} &mdash; {%endif%}{{site.title}}</title>
+    <link rel="stylesheet" href="{{site.domain}}/assets/style.css?3" />
+    <style>
+        #content {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        h1.media {
+            border-bottom: 4px solid #FF9000;
+          }
+
+        h1.math  {
+            border-bottom: 4px solid #0085FF;
+          }
+
+        h1.magic {
+        border-bottom: 4px solid #9728a1;
+      }
+    </style>
+</head>
+<body>
+    <header>       
+        {% include navigation.html %}
+        <h1><a href="{{site.url}}/">{{site.title}}</a></h1>
+    </header>
+
+    {% assign caption = page.portrait_caption %}
+    {% assign linkified_content = content %}
+    {% assign names = site.data.people.names | split: "," %}
+    {%if page.title != ""%}<h1 class="{{page.category}}">{{ page.title }}</h1>{%endif%}
+    <div id="content" class="full">
+        {{linkified_content}}
+    </div>
+    <div id="info">Site last updated on {{ site.time | date: '%B %e, %Y' }}. <a href="{{ site.url }}/about.html">[about site]</a></div>
+</body>
+</html>
