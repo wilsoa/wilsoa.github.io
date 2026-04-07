@@ -158,8 +158,8 @@ Topics: <div id="tags">{% for tag in tags %}
    {% for pub in site.data.publications reversed %}
     {% if pub.tags%} {% assign tags = pub.tags | split: ", " %}{% endif %}
     <li class='{% for tag in tags %}{{tag|downcase|replace: " ", ""}} {% endfor %}'> {{pub.title}}
-    {% if pub.collaborators%}(with {% for name in pub.collaborators %} <a href="{{site.data.people[name].url}}">{{site.data.people[name].fullname}}</a>{% endfor %}).{% endif %}<br /> {{pub.citation}}.
-    <br />{% if pub.arxiv%} [<a href="https://arxiv.org/abs/{{pub.arxiv}}" class="arxiv">arXiv:{{pub.arxiv}}</a>]{% endif %}
+    {% if pub.collaborators%}(with {% for name in pub.collaborators %} {% if site.data.people[name].url %}<a href="{{site.data.people[name].url}}">{{site.data.people[name].shortname}}</a>{% else %}{{site.data.people[name].shortname}}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}).{% endif %}<br /> {{pub.citation}}.
+    {% if pub.arxiv%} [<a href="https://arxiv.org/abs/{{pub.arxiv}}" class="arxiv">arXiv:{{pub.arxiv}}</a>]{% endif %}
     {% if pub.pdf%} [<a href="{{ site.url }}/assets/documents/{{pub.pdf}}" class="arxiv">pdf</a>]{% endif %}
     {% if pub.github%} [<a href="{{pub.github}}" class="github">GitHub</a>]{% endif %}
     {% if pub.slides%} [<a href="{{ site.url }}/assets/slides/{{pub.slides.pdf}}" class="slides">Slides</a>, {{pub.slides.location}}]{% endif %}

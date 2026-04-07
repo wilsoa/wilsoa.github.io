@@ -1,5 +1,11 @@
-- title: "Closed Forms of Recursive Polynomials and Applications (with M. Haver, K. Lee, W. McDermott, W. Yu, A. Zeleke)"
+- title: "Closed Forms of Recursive Polynomials and Applications"
   citation: "<i>Ars Combinatoria</i>, <b>142</b> (2019), 175-195"
+  collaborators:
+    - mhaver
+    - klee
+    - wmcdermott
+    - wyu
+    - ak
 - title: "The Multiset Partition Algebra: Diagram-Like Bases and Representations"
   citation: Ph.D. Thesis, Dartmouth College 2023
   pdf: wilson_thesis.pdf
@@ -38,17 +44,35 @@
     - bruce
   citation: <a href="https://www.mat.univie.ac.at/~slc/wpapers/FPSAC2025/141.pdf" target="_"><i>Proceedings of FPSAC 2025, Sém. Lothar. Combin.</i> <b>93B</b> (2025), 12pp</a>
   tags: Crystals
-- title: The support of Kostant's weight multiplicity formula is an order ideal in the Bruhat order (with P. X. Anderson, E. Banaian, M. J. Ferreri, O. C. Goff, K. P. Hadaway, P. E. Harris, K. J. Harry, N. Mayers, S. Wang)
+- title: The support of Kostant's weight multiplicity formula is an order ideal in the Bruhat order
   citation: <i><a href="https://intlpress.com/journals/journalList?p=1&id=1804415585555116033" target="_">Journal of Combinatorics</a></i>, to appear
   arxiv: "2412.16820"
   slides:
     location: UW Madison Combinatorics Seminar Jan 27, 2025
     pdf: 2025.1.27 UW Madison Seminar.pdf
   tags: Lie Theory
-- title: The defective parking space and defective Kreweras numbers (with R. E. Garcia, P. E. Harris, A. Moon, A. Ortiz, L. J. Quesada, C. M. Rivera Sánchez, D. A. Williams II)
+  collaborators:
+    - pxanderson
+    - ebanaian
+    - mjferreri
+    - ocgoff
+    - kphadaway
+    - pamela
+    - kjharry
+    - nmayers
+    - swang
+- title: The defective parking space and defective Kreweras numbers
   citation: <i><a href="https://www.sciencedirect.com/journal/discrete-mathematics" target="_">Discrete Mathematics</a></i>, to appear
   arxiv: "2405.14635"
   tags: Parking Functions, Symmetric Functions
+  collaborators:
+    - rgarcia
+    - pamela
+    - amoon
+    - aortiz
+    - lquesada
+    - cmrsanchez
+    - dwilliamsii
 - title: "Costello Divisibility: Exploration of a Comedic Division Algorithm"
   pdf: "Costello_Divisibility.pdf"
   collaborators:

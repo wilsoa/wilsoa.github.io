@@ -12,18 +12,98 @@ roby:
 ben:
   url: https://badenbaum.github.io/
   fullname: "Ben Adenbaum"
+  shortname: "B. Adenbaum"
 bruce:
   url: https://users.math.msu.edu/users/bsagan/
   fullname: "Bruce E. Sagan"
+  shortname: "B. E. Sagan"
 nate:
   url: https://www.nateharman.com/
   fullname: "Nate Harman"
+  shortname: "N. Harman"
 sam:
   url: https://stolenquotient2.github.io/
   fullname: "Sam Thiel"
+  shortname: "S. Thiel"
 pamela:
   url: https://www.pamelaeharris.com/
-  fullname: Pamela E. Harris
+  fullname: "Pamela E. Harris"
+  shortname: "P. E. Harris"
 carlos:
   url: https://jcmartinezmori.github.io/
   fullname: J. Carlos Martinez Mori
+  shortname: "J. C. Martinez Mori"
+mhaver:
+  url: https://cmns.umd.edu/people/michelle-haver
+  fullname: Michelle Haver
+  shortname: "M. Haver"
+klee:
+  fullname: Kathleen Lee
+  shortname: K. Lee
+wmcdermott:
+  fullname: William McDermott
+  shortname: "W. McDermott"
+wyu:
+  url: https://sites.google.com/view/weihsuanyu
+  fullname: Wei-Husan Yu
+  shortname: "W. Yu"
+ak:
+  url: https://lbc.msu.edu/about/faculty-and-staff-directory/aklilu-zeleke
+  fullname: Aklilu Zeleke
+  shortname: "A. Zeleke"
+rgarcia:
+  url: "https://www.profrebeccagarcia.com/"
+  fullname: "Rebecca E. Garcia"
+  shortname: "R. E. Garcia"
+amoon: 
+  url: "https://www.alex-moon.com/home"
+  fullname: "Alex Moon"
+  shortname: "A. Moon"
+aortiz: 
+  url: "https://www.linkedin.com/in/aaron-ortiz-08ab9a22b"
+  fullname: "Aaron Ortiz"
+  shortname: "A. Ortiz"
+lquesada: 
+  url: 
+  fullname: "Lauren J. Quesada"
+  shortname: "L. J. Quesada"
+cmrsanchez: 
+  url: 
+  fullname: "Cynthia Marie Rivera Sánchez"
+  shortname: "C. M. Rivera Sánchez"
+dwilliamsii: 
+  url: "https://mathdwight.com/"
+  fullname: "Dwight Anderson Williams II"
+  shortname: "D. A. Williams II"
+pxanderson:
+  url: "https://pi.math.cornell.edu/~pxa2/"
+  fullname: "Portia X. Anderson"
+  shortname: "P. X. Anderson"
+ebanaian:
+  url: "https://sites.google.com/view/esther-banaian/home"
+  fullname: "Esther Banaian"
+  shortname: "E. Banaian"
+mjferreri:
+  url: "https://sites.google.com/view/mferreri/"
+  fullname: "Melanie Ferreri"
+  shortname: "M. J. Ferreri"
+ocgoff:
+  url: "https://sites.google.com/view/ogoff1-uwmadison/home"
+  fullname: "Owen Goff"
+  shortname: "O. C. Goff"
+kphadaway:
+  url: "https://www.kimberlyphadaway.com/"
+  fullname: "Kimberly P. Hadaway"
+  shortname: "K. P. Hadaway"
+kjharry:
+  url: "https://sites.google.com/view/kim-harry/home"
+  fullname: "Kimberly J. Harry"
+  shortname: "K. J. Harry"
+nmayers:
+  url: "https://sites.google.com/view/nmayers"
+  fullname: "Nicholas Mayers"
+  shortname: "Nick Mayers"
+swang:
+  url: "https://www.sywangmath.com/"
+  fullname: "Shiyun Wang"
+  shortname: "S. Wang"
