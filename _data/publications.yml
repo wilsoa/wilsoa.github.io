@@ -93,5 +93,12 @@
   collaborators:
     - carlos
     - pamela
-  citation: <i><a href="https://dmtcs.episciences.org" target="_">Discrete Mathematics & Theoretical Computer Science</a></i>, to appear
+  citation: <i><a href="https://dmtcs.episciences.org" target="_">Discrete Mathematics & Theoretical Computer Science</a></i>, vol. 28:1, Permutations Patterns 2025
   tags: Parking Functions
+- title: Inducing Parking Spaces to the Hyperoctahedral Group
+  pdf: "inducing_pfs_to_hg.pdf"
+  collaborators:
+    - carlos
+    - pamela
+  citation: <i><a href="https://gja.intrasci.net/article_25169.html" target="_">Galois Journal of Algebra</a></i>, 3 (2027), no. 1, pp. 26-50.
+  tags: Parking Functions, Symmetric Functions
