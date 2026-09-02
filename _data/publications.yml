@@ -102,3 +102,13 @@
     - pamela
   citation: <i><a href="https://gja.intrasci.net/article_25169.html" target="_">Galois Journal of Algebra</a></i>, 3 (2027), no. 1, pp. 26-50.
   tags: Parking Functions, Symmetric Functions
+- title: Varieties of chain complexes and mixed dimer covers
+  citation: <i>Preprint</i>
+  arxiv: "2609.00202"
+  tags: Representation Theory
+  collaborators:
+    - pxanderson
+    - ebanaian
+    - mjferreri
+    - nmayers
+    - swang
